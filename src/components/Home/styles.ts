@@ -9,6 +9,7 @@ export const SubscribeTitle = styled.div`
   font-size: 66px;
   font-weight: bold;
   text-align: center;
+  color: #fff;
   margin-bottom: 50px;
 `;
 
@@ -16,6 +17,7 @@ export const SubscribeDesc = styled.div`
   text-align: center;
   font-size: 33px;
   line-height: 46px;
+  color: #fff;
   margin-bottom: 50px;
 `;
 
@@ -23,6 +25,7 @@ export const Title = styled.div`
   font-size: 33px;
   font-weight: 700;
   text-align: center;
+  color: #fff;
   margin-bottom: 60px;
   span {
     background: linear-gradient(

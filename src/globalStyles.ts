@@ -51,17 +51,18 @@ export const GlobalStyles = createGlobalStyle`
   html {
     cursor: default;
     -webkit-focus-ring-color: rgba(255, 255, 255, 0);
-    font-family: sans-serif;
+    font-family: 'IBM Plex Mono', monospace;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
   }
   body {
     font-size: 100%;
+    color: #fff;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     line-height: 1;
-    background: #fff;
+    background: #1F232B;
   }
   a {
     background: transparent;
@@ -161,8 +162,10 @@ export const GlobalStyles = createGlobalStyle`
   }
   body {
     min-height: 100vh;
+    color: #fff;
+    background: #1F232B;
     color: #17161a;
-    font-family: 'Barlow', system-ui, sans-serif;
+    font-family: 'IBM Plex Mono', monospace, system-ui, sans-serif;
     font-feature-settings: 'kern', 'liga', 'calt';
   }
   button {

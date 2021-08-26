@@ -11,7 +11,7 @@ const Header = () => {
     <S.Root>
       <Link to="/">
         <S.Logo>
-          <img style={{maxWidth: '100px'}} src={logo} srcSet={`${logo2x} 2x`} alt="Octans NFT" />
+          <img style={{maxWidth: '70px'}} src={logo} srcSet={`${logo2x} 2x`} alt="Octans NFT" />
         </S.Logo>
       </Link>
       <NavBar />

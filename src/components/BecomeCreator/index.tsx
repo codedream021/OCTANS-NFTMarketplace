@@ -1,14 +1,19 @@
 import Button from 'components/UI/Button';
-import Container from 'components/UI/Container';
+import Container, { Tilt } from 'components/UI/Container';
 import View from 'components/UI/View';
 import React from 'react';
 import * as S from './styles';
 import bg from './bg.jpg';
 import bg2x from './bg@2x.jpg';
-
+const options = {
+  scale: 1.2,
+  speed: 1000,
+  max: 30
+};
 const BecomeCreator = () => {
   return (
     <View paddingV={100}>
+      <Tilt options={options}>
       <Container>
         <S.Title>Welcome to the future of OCTANS economy.</S.Title>
         <S.Description>
@@ -17,10 +22,11 @@ const BecomeCreator = () => {
         </S.Description>
         <View row centerH>
           <Button size="md" theme="gradient">
-            <span>Become a creator</span>
+            <span style={{color:"#fff"}}>Become a creator</span>
           </Button>
         </View>
       </Container>
+      </Tilt>
       <S.Bg>
         <img src={bg} srcSet={`${bg2x} 2x`} alt="" />
       </S.Bg>
