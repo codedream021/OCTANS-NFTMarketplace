@@ -5,6 +5,9 @@ export const Logo = styled.div``;
 
 export const Root = styled(View)`
   position: relative;
+  background-color: #20252D;
+  -webkit-box-shadow:-1px 1px 15px 2px rgb(0 169 204 / 40%);
+  box-shadow:-1px 1px 15px 2px rgb(0 169 204 / 40%);
 `;
 
 Root.defaultProps = {
@@ -12,35 +15,39 @@ Root.defaultProps = {
   centerV: true,
   spread: true,
   paddingH: 80,
-  paddingV: 20,
+  paddingV: 10,
 };
 
 export const NavBar = styled.div`
   position: absolute;
-  background: #ffffff;
-  border: 1px solid #edf0f4;
+  background: #15181D;
+  border: 1px solid #40BDDC;
   box-sizing: border-box;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow:-1px 1px 15px 2px rgb(0 169 204 / 40%) ;
+  box-shadow:-1px 1px 15px 2px rgb(0 169 204 / 40%); border-radius: 12px;
   border-radius: 30px;
   padding: 10px;
   left: 50%;
   transform: translateX(-50%);
   a {
-    height: 60px;
+    height: 40px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     font-size: 18px;
+    padding:5px;
     min-width: 110px;
     font-weight: 700;
-    background: #f8fafc;
-    border-radius: 20px;
+    background: #343539;
+    border-radius: 12px;
+    color:white;
     &:not(:last-child) {
       margin-right: 10px;
     }
     &.active {
-      background-color: #7549d4;
+      background-color: #40BDDC;
       color: #fff;
+      border-radius: 12px;
     }
   }
 `;

@@ -13,7 +13,11 @@ const menu = [
   },
   {
     path: '/videos',
-    name: 'Gallery',
+    name: 'Browse',
+  },
+    {
+    path: '/collections',
+    name: 'Collections',
   },
   {
     path: '/creators',

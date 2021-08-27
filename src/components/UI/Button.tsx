@@ -69,7 +69,6 @@ const gradient = css`
       #f09051 100%
     );
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 `;
 
@@ -86,12 +85,39 @@ const themes: Record<Theme, any> = {
 };
 
 const ButtonBase = styled.button<{ size: Size; btnTheme: Theme }>`
-  border-radius: 20px;
-  ${({ size }) => sizes[size]};
-  ${({ btnTheme }) => themes[btnTheme]};
-  font-weight: bold;
-  white-space: nowrap;
+font-family: IBM Plex Mono;
+font-weight: 700;
+font-style: normal;
+letter-spacing: 1px;
+border-width: 0px;
+border-style: solid;
+border-radius: 25px;
+${({ size }) => sizes[size]};
+${({ btnTheme }) => themes[btnTheme]};
+white-space: nowrap;
+text-transform: uppercase;
+transition: all .2s;
+box-shadow: inset 0 1px 0 #fff,
+0 2px 0 rgb(0 0 0 / 22%),
+1px 4px 4px 2px rgb(00 0 / 30%);
+outline: 0;
+border-color: #105378;
+background: #3dbbd8;
+color: #ffffff;
+padding: 9px 20px;
+line-height: 14px;
+font-size: 16px;
+display: inline-block;
+position: relative;
+zoom: 1;
+border: 1px solid transparent;
+text-align: center;
+text-transform: uppercase;
+text-decoration: none;
+cursor: pointer;
+transition: all .2s;
 `;
+
 ButtonBase.defaultProps = { type: 'button' };
 
 const Button = ({

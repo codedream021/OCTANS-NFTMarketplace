@@ -21,7 +21,7 @@ import { Account } from 'types/account';
 import Spinner from 'components/UI/Spinner';
 import { Network, OpenSeaPort } from 'opensea-js';
 
-const REACT_APP_TOKEN_ADDRESS = window._env_.REACT_APP_TOKEN_ADDRESS as string;
+const REACT_APP_TOKEN_ADDRESS = process.env.REACT_APP_TOKEN_ADDRESS as string;
 const BALANCE_FETCH_INTERVAL = 3000;
 
 const ProfileBlock = () => {
@@ -88,6 +88,7 @@ const ProfileBlock = () => {
     const { token } = await authApi.auth(account, signature);
     localStorage.setItem('token', token);
     localStorage.setItem('account', account);
+    console.log({token});
     setTokenHeader(token);
     updateOpenSea();
     refetch();
@@ -118,6 +119,8 @@ const ProfileBlock = () => {
   const formattedEthBalance = toFixedNoRound(formatEther(ethBalance), 2);
 
   const renderMetaMaskData = () => {
+    console.log({isMetamaskInstalled});
+    console.log({isFetchedAfterMount});
     if (isFetching && !isFetchedAfterMount) {
       return (
         <div>

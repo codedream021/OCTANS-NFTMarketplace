@@ -12,6 +12,7 @@ export const List = styled.div`
 export const Title = styled.div`
   font-size: 33px;
   font-weight: 700;
+  color: #fff;
   text-align: center;
   margin-bottom: 22px;
 `;

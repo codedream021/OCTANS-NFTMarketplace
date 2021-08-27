@@ -46,6 +46,7 @@ export const Author = styled.div`
 export const Name = styled.div`
   font-size: 24px;
   font-weight: 700;
+  color:#fff;
   margin-left: 19px;
 `;
 
@@ -53,6 +54,7 @@ export const Title = styled.div`
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 30px;
+  color:#fff;
   cursor: pointer;
   transition: color 0.15s ease-in-out;
   &:hover {
@@ -79,11 +81,13 @@ export const InfoTitle = styled.div`
 `;
 
 export const Card = styled.div<{ horizontal?: boolean }>`
-  background: #ffffff;
-  border: 1px solid #edf0f4;
+  background: #15181D;
+  border:1px solid rgb(61, 187, 216); 
   box-sizing: border-box;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06);
-  border-radius: 30px;
+  -webkit-box-shadow:-1px 1px 15px 2px rgb(0 169 204 / 40%) ; 
+  box-shadow:-1px 1px 15px 2px rgb(0 169 204 / 40%);
+   border-radius: 12px;
   padding: 40px;
   display: flex;
   flex-direction: ${({ horizontal = false }) =>

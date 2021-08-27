@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Title = styled.div`
   font-size: 66px;
   font-weight: 700;
+  color: #fff;
   margin-bottom: 50px;
   text-align: center;
   padding: 0 80px;
@@ -11,6 +12,7 @@ export const Title = styled.div`
 export const Description = styled.div`
   font-size: 33px;
   text-align: center;
+  color: #fff;
   margin-bottom: 50px;
 `;
 

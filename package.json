@@ -25,6 +25,7 @@
     "humps": "^2.0.1",
     "jwt-decode": "^3.1.2",
     "lodash": "^4.17.21",
+    "mini-css-extract-plugin": "^2.2.0",
     "mobx": "^6.3.2",
     "mobx-react-lite": "^3.2.0",
     "numeral": "^2.0.6",
@@ -39,6 +40,7 @@
     "react-identicons": "^1.2.5",
     "react-qr-code": "^1.1.1",
     "react-query": "^3.18.1",
+    "react-refresh-webpack-plugin": "^0.1.0",
     "react-router": "6.0.0-beta.0",
     "react-router-dom": "6.0.0-beta.0",
     "react-scripts": "4.0.3",
@@ -48,8 +50,10 @@
     "styled-components": "^5.3.0",
     "swiper": "^6.7.1",
     "typescript": "^4.3.4",
+    "vanilla-tilt": "^1.7.1",
     "web-vitals": "^2.0.1",
     "web3": "^1.3.6",
+    "webpack": "^4.42.1",
     "yup": "^0.32.9"
   },
   "scripts": {
