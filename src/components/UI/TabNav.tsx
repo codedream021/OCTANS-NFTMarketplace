@@ -15,10 +15,13 @@ interface Props<T> {
 }
 
 const TabNavButton = styled.button<{ active: boolean }>`
-  color: ${({ active }) => (active ? '#17161A' : '#17161a80')};
+  color: ${({ active }) => (active ? '#40BDDC' : '#fff')};
   font-size: 33px;
   font-weight: bold;
   padding-bottom: 30px;
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
   position: relative;
   &:not(:last-child) {
     margin-right: 100px;
@@ -27,8 +30,7 @@ const TabNavButton = styled.button<{ active: boolean }>`
     content: '';
     position: absolute;
     width: 100%;
-    height: 10px;
-    bottom: -10px;
+
     background: #17161a;
     display: ${({ active }) => (active ? 'block' : 'none')};
   }
@@ -56,7 +58,7 @@ const TabNav = <T extends number>({ tabs, onChange, activeTab }: Props<T>) => {
     [activeTab]
   );
 
-  return <View row>{map(renderButton, tabs)}</View>;
+  return <div>{map(renderButton, tabs)}</div>;
 };
 
 export default TabNav;

@@ -11,6 +11,9 @@ export const SubscribeTitle = styled.div`
   text-align: center;
   color: #fff;
   margin-bottom: 50px;
+  @media (max-width: 768px) {
+    font-size: 40px;
+  }
 `;
 
 export const SubscribeDesc = styled.div`
@@ -19,6 +22,9 @@ export const SubscribeDesc = styled.div`
   line-height: 46px;
   color: #fff;
   margin-bottom: 50px;
+  @media (max-width: 768px) {
+    font-size: 25px;
+  }
 `;
 
 export const Title = styled.div`
@@ -27,6 +33,9 @@ export const Title = styled.div`
   text-align: center;
   color: #fff;
   margin-bottom: 60px;
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
   span {
     background: linear-gradient(
       270deg,
@@ -41,7 +50,7 @@ export const Title = styled.div`
 `;
 
 export const Head = styled.div`
-  background-color: #f8fafc;
+  background-color: #1F232B;
   padding-top: 220px;
   margin-top: -160px;
   padding-bottom: 100px;

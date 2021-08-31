@@ -4,16 +4,18 @@ import Container from 'components/UI/Container';
 import Button from 'components/UI/Button';
 import { useLive } from 'api/spotlight';
 import { Asset } from 'types/asset';
-import { map } from 'lodash/fp';
 import * as S from './styles';
+import Swiper from 'react-id-swiper';
+import { paramsWithMaxAndMin } from 'helpers/consts';
+import "swiper/css/swiper.css";
 
-const renderItem = (asset: Asset) => {
-  return (
-    <div key={asset.id}>
-      <AuctionCard asset={asset} />
-    </div>
-  );
-};
+// const renderItem = (asset: Asset) => {
+//   return (
+//     <div key={asset.id}>
+//       <AuctionCard asset={asset} />
+//     </div>
+//   );
+// };
 
 const LiveAuctions = () => {
   const { data } = useLive();
@@ -22,10 +24,20 @@ const LiveAuctions = () => {
       <Container>
         <S.Header>
           <S.Title>Live auctions</S.Title>
-          <Button theme="secondary">View all live auctions</Button>
+          <Button size="sm" theme="secondary">View all live auctions</Button>
         </S.Header>
       </Container>
-      <S.List>{map(renderItem, data)}</S.List>
+      {/* <S.List>{map(renderItem, data)}</S.List> */}
+
+      <Swiper {...paramsWithMaxAndMin(3, 1)}>
+        {data?.map((asset: Asset) => {
+          return (
+            <div key={asset.id}>
+              <AuctionCard asset={asset} />
+            </div>
+          );
+        })}
+      </Swiper>
     </>
   );
 };

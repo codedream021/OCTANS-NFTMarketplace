@@ -11,7 +11,7 @@ const whitelists = [
 
 const Avatar = ({ name, src, size = 'sm' }: AvatarProps) => {
   return (
-    <S.Avatar size={size}>
+    <S.Avatar size={size} isCreatorPage={true}>
       {src && whitelists.includes(name.substring(0, 7)) ? (
         <img src={src} alt={name} />
       ) : (

@@ -43,7 +43,7 @@ export const Address = styled.div`
   border-radius: 30px;
   padding: 24px 30px;
   font-size: 33px;
-  min-width: 540px;
+  width:100%;
   justify-content: space-between;
   font-weight: 500;
   margin-bottom: 100px;
@@ -53,8 +53,11 @@ export const AddressVal = styled.div`
   color: #7549d4;
   font-weight: normal;
   margin-top: 20px;
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 `;
 
 export const Profile = styled.div`
-  background: #fff;
+color: #7549d4;
 `;

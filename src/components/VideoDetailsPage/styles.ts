@@ -3,11 +3,16 @@ import styled from 'styled-components';
 export const AuthorName = styled.div`
   font-size: 24px;
   font-weight: bold;
+  color: #fff;
 `;
 
 export const SocialItem = styled.a`
   width: 80px;
   height: 80px;
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
   background: #ffffff;
   border: 1px solid #edf0f4;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
@@ -24,9 +29,9 @@ export const Container = styled.div`
 `;
 
 export const Hero = styled.div`
-  background: #f8fafc;
   padding-top: 303px;
   margin-top: -203px;
+  
   padding-bottom: 143px;
   img {
     border-radius: 20px;
@@ -35,6 +40,10 @@ export const Hero = styled.div`
 
 export const Title = styled.div`
   font-size: 66px;
+  color: #fff;
+  @media (max-width: 768px) {
+    font-size: 38px;
+  }
   font-weight: bold;
   margin-bottom: 50px;
 `;
@@ -106,6 +115,10 @@ export const BidBtns = styled.div`
 export const SectionTitle = styled.div`
   font-size: 33px;
   font-weight: bold;
+  color: #fff;
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
   padding-bottom: 30px;
   border-bottom: 1px solid #e4e8ed;
   margin-bottom: 30px;
@@ -114,6 +127,10 @@ export const SectionTitle = styled.div`
 export const DescriptionText = styled.div`
   font-size: 24px;
   line-height: 1.4;
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+  color: #fff;
   p {
     &:not(:last-child) {
       margin-bottom: 20px;
@@ -161,27 +178,39 @@ export const HistoryPlaced = styled.div`
   span {
     color: #7549d4;
   }
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
 `;
 export const HistoryDate = styled.div`
   font-size: 24px;
   font-weight: 500;
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
   opacity: 0.5;
 `;
 export const HistoryVid = styled.div`
   font-size: 33px;
   font-weight: bold;
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
   margin-bottom: 9px;
   text-align: right;
 `;
 export const HistoryUsd = styled.div`
   font-size: 24px;
   opacity: 0.5;
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
   text-align: right;
 `;
 export const Video = styled.div`
   border-radius: 20px;
-  width: 900px;
-  height: 500px;
+  width: auto;
+  height: auto;
   overflow: hidden;
   background-color: #ccc;
   video {

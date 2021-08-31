@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import View from '../UI/View';
 
-export const Logo = styled.div``;
+export const Logo = styled.div`
+display: inline;
+`;
 
 export const Root = styled(View)`
   position: relative;

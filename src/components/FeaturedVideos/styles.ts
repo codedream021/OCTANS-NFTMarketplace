@@ -1,12 +1,7 @@
 import styled from 'styled-components';
 
 export const List = styled.div`
-  display: grid;
-  grid-gap: 40px;
-  grid-template-columns: 1fr 1fr;
-  & > div:nth-of-type(3n + 1) {
-    grid-column-end: span 2;
-  }
+  display: flex;
 `;
 
 export const Title = styled.div`

@@ -9,11 +9,16 @@ export const Root = styled.div`
 export const Video = styled.div`
   max-width: 900px;
   flex: 2;
+  width: 90%;
   margin-right: 40px;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06);
   border-radius: 20px;
   position: relative;
-  video {
+  margin:auto;
+  @media (min-width: 768px) {
+    height: 642.444px;
+  }
+    video {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -46,22 +51,35 @@ export const PlayBtn = styled.div`
   }
 `;
 export const Content = styled.div`
-  width: 580px;
+  width: 90%;
+  margin:auto;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
   background: #fff;
   padding: 40px 40px 20px;
   border-radius: 30px;
-`;
+  @media (max-width: 768px) {
+    margin-top:20px;
+  }
+  @media (min-width: 768px) {
+    height: 642.444px;
+  }
+  `;
 export const Nickname = styled.div`
   font-size: 24px;
   font-weight: 700;
   margin-left: 20px;
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 export const Title = styled.div`
   font-size: 66px;
   font-weight: 700;
   margin-bottom: 46px;
+  @media (max-width: 768px) {
+    font-size: 40px;
+  }
 `;
 
 export const Bid = styled.div`

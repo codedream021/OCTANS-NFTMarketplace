@@ -7,6 +7,10 @@ export const Title = styled.div`
   margin-bottom: 50px;
   text-align: center;
   padding: 0 80px;
+  @media (max-width: 768px) {
+    font-size: 38px;
+    padding: 0 20px;
+  }
 `;
 
 export const Description = styled.div`
@@ -14,6 +18,9 @@ export const Description = styled.div`
   text-align: center;
   color: #fff;
   margin-bottom: 50px;
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
 `;
 
 export const Bg = styled.div`
@@ -24,5 +31,9 @@ export const Bg = styled.div`
   margin-bottom: -150px;
   img {
     width: 2320px;
+    @media (max-width: 768px) {
+      width: 100%;
+      height: 200px;
+    }
   }
 `;
