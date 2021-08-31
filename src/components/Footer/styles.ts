@@ -15,6 +15,9 @@ export const Inner = styled.div`
     width: 230px;
     flex-shrink: 0;
   }
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 export const Copyright = styled.div`
@@ -27,6 +30,9 @@ export const Title = styled.div`
   font-size: 33px;
   margin-bottom: 100px;
   line-height: 1.4;
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
 `;
 
 export const Menu = styled.div`

@@ -4,7 +4,7 @@ import * as S from './styles';
 const Description = (props: any) => {
   const { text } = props;
   return (
-    <div>
+    <div style={{color:"#fff"}}>
       <S.SectionTitle>Description</S.SectionTitle>
       <S.DescriptionText>
         <p>

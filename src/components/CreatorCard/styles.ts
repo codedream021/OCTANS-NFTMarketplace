@@ -32,6 +32,9 @@ export const Name = styled.div`
   font-weight: 700;
   margin-top: 45px;
   margin-bottom: 20px;
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
 `;
 
 export const Nickname = styled.div`
@@ -49,4 +52,7 @@ export const Nickname = styled.div`
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  @media (max-width: 768px) {
+    font-size: 22px;
+  }
 `;

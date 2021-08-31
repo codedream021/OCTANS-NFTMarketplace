@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from 'components/Home';
-import Header from './components/Header';
+import Header from './components/Header/Header';
 import { GlobalStyles } from 'globalStyles';
 import Footer from 'components/Footer';
 import routes from './routes';
@@ -43,13 +43,14 @@ function App() {
   useEffect(() => {
     setActivatingConnector(currentConnector);
   }, []);
+
   return (
     <BrowserRouter>
       <StoreContext.Provider value={store}>
         <QueryClientProvider client={queryClient}>
           <GlobalStyles />
           <ScrollToTop />
-          <Header />
+          <Header fixed={false} color={"transparent"} changeColorOnScroll={{height:0,color:"white"}} />
           <Routes>
             <Route path={routes.home} element={<Home />} />
             <Route path="/drops" element={<Home />} />

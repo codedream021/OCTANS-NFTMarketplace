@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import * as S from './styles';
 import logo from './logo.png';
 import View from '../UI/View';
+import styled from 'styled-components';
 
 const menu = [
   {
@@ -39,13 +40,22 @@ const menu2 = [
     name: 'Help',
   },
 ];
+export const ListItem = styled.li`
+  list-style: none;
+  &:hover {
+    color: #ffc107;
+  }
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+`;
 
 const Footer = () => {
   const renderLink = ({ path, name }: { path: string; name: string }) => {
     return (
-      <li key={path}>
+      <ListItem key={path}>
         <Link to={path}>{name}</Link>
-      </li>
+      </ListItem>
     );
   };
   return (

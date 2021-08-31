@@ -33,7 +33,7 @@ const VideoDetailsPage = () => {
     <div>
       <Player url={data.url} />
       <Container>
-        <View marginT={-40} marginB={30} row spread>
+        <View marginT={-30} marginB={30} row spread>
           <Author owner={data.creator} />
           <Social />
         </View>

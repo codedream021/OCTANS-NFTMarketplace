@@ -34,6 +34,12 @@ const xl = css`
   border-radius: 50px;
   border: 16px solid #ffffff;
 `;
+const isCreatorPage = css`
+width: 68px;
+height: 68px;
+border-radius: 20px;
+border: 4px solid #fff;
+`;
 
 const sizes: Record<Size, any> = {
   xxs,
@@ -43,7 +49,7 @@ const sizes: Record<Size, any> = {
   xl,
 };
 
-export const Avatar = styled.div<{ size: Size }>`
+export const Avatar = styled.div<{ size: Size,isCreatorPage:boolean }>`
   ${({ size }) => sizes[size]};
   overflow: hidden;
   img {
@@ -51,5 +57,8 @@ export const Avatar = styled.div<{ size: Size }>`
     height: 100%;
     object-fit: cover;
     display: inline-block;
+  }
+  @media (max-width: 768px) {
+    ${({ size }) => isCreatorPage ? sizes.sm : sizes.xl};
   }
 `;

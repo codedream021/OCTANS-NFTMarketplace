@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
 
 export const Grid = styled.ul`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 40px;
   justify-content: center;
 `;
@@ -34,6 +34,11 @@ export const SearchBar = styled.div<{ focus: boolean }>`
     font-size: 24px;
     font-weight: 500;
     font-family: Barlow, sans-serif;
+    @media (max-width: 768px) {
+      font-size: 20px;
+      height: 60px;
+      padding: 0 42px;
+    }
     &::placeholder {
       color: #a1aab9;
     }
@@ -50,4 +55,8 @@ export const SearchIcon = styled.div`
   position: absolute;
   left: 30px;
   top: 32px;
+  @media (max-width: 768px) {
+    display: none;
+
+  }
 `;

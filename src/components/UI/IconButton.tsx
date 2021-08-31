@@ -12,6 +12,10 @@ const Button = styled.button`
   align-items: center;
   justify-content: center;
   margin-left: auto;
+  @media (max-width: 768px) {
+    width: 60px;
+    height: 60px;
+  }
 `;
 
 const IconButton = ({ children }: { children: ReactNode }) => {

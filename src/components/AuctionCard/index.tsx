@@ -33,16 +33,7 @@ const AuctionCard = ({
           <S.Name>@{username}</S.Name>
         </S.Author>
         <S.Title>{name}</S.Title>
-        <S.Info>
-          <div>
-            <S.InfoTitle>Current Bid</S.InfoTitle>
-            <div>42.11 OCTN</div>
-          </div>
-          <div>
-            <S.InfoTitle>Ending in</S.InfoTitle>
-            <div>58 sec</div>
-          </div>
-        </S.Info>
+       
       </div>
     </S.Card>
   );

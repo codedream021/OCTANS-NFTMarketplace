@@ -6,16 +6,18 @@ import React from 'react';
 import * as S from './styles';
 import { useFeatured } from 'api/spotlight';
 import { Asset } from 'types/asset';
+import Swiper from 'react-id-swiper';
+import { paramsWithMaxAndMin } from 'helpers/consts';
 
-const wideCardIdx = 3;
+// const wideCardIdx = 3;
 
-const renderItem = (asset: Asset, idx: number) => {
-  return (
-    <div key={asset.id}>
-      <AuctionCard asset={asset} horizontal={!(idx % wideCardIdx)} />
-    </div>
-  );
-};
+// const renderItem = (asset: Asset, idx: number) => {
+//   return (
+//     <div key={asset.id}>
+//       <AuctionCard asset={asset} horizontal={!(idx % wideCardIdx)} />
+//     </div>
+//   );
+// };
 
 const FeaturedVideos = () => {
   const { data } = useFeatured();
@@ -23,7 +25,17 @@ const FeaturedVideos = () => {
     <View marginT={100}>
       <Container>
         <S.Title>Featured NFTs</S.Title>
-        <S.List>{data?.map(renderItem)}</S.List>
+      
+      <Swiper {...paramsWithMaxAndMin(3, 1)}>
+        {data?.map((asset: Asset) => {
+          return (
+            <div key={asset.id}>
+              <AuctionCard asset={asset} />
+            </div>
+          );
+        })}
+      </Swiper>
+
         <View row centerH marginT={40}>
           <Button theme="secondary" size="md">
             View all NFTs

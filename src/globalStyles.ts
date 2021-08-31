@@ -2,7 +2,6 @@ import '@fontsource/barlow';
 import '@fontsource/barlow/500.css';
 import '@fontsource/barlow/700.css';
 import '@fontsource/barlow/900.css';
-import 'swiper/swiper.min.css';
 import { createGlobalStyle } from 'styled-components';
 import 'react-toastify/dist/ReactToastify.css';
 

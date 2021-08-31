@@ -11,7 +11,7 @@ const Author = ({ owner }: { owner: Creator }) => {
   return (
     <div>
       <View row centerV marginB={30}>
-        <Avatar src={profileImgUrl} size="md" name={address} />
+        <Avatar src={profileImgUrl} size="sm" name={address} />
         <View marginL={20} marginR={10}>
           <Badge1 />
         </View>

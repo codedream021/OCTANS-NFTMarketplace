@@ -19,12 +19,21 @@ export const Header = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin:15px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 export const Title = styled.div`
   display: flex;
   font-size: 33px;
   font-weight: bold;
   align-items: center;
+  color: #fff;
+  margin:15px;
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
   &::before {
     content: '';
     background: linear-gradient(
