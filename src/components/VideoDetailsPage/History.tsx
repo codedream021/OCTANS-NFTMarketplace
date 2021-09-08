@@ -3,6 +3,7 @@ import { map } from 'lodash/fp';
 import * as S from './styles';
 import Avatar from '../Avatar';
 import View from '../UI/View';
+import OctansLogoSale from 'components/OctansLogoSale';
 
 interface HistoryItemProps {
   id: number;
@@ -29,7 +30,7 @@ const HistoryItem = ({
         <S.HistoryDate>{date}</S.HistoryDate>
       </View>
       <View marginL="auto">
-        <S.HistoryVid>{amountVid}</S.HistoryVid>
+        <S.HistoryVid>{amountVid}<OctansLogoSale/></S.HistoryVid>
         <S.HistoryUsd>{amountUsd}</S.HistoryUsd>
       </View>
     </S.HistoryItem>
@@ -43,7 +44,7 @@ const data: HistoryItemProps[] = [
     avatar: 'https://i.pravatar.cc/160?img=5',
     placedBy: '@gloria_queen',
     date: 'March 12, 2021 at 1:25am',
-    amountVid: '978.50 OCTN',
+    amountVid: '978.50',
     amountUsd: '$483.49',
   },
   {
@@ -52,7 +53,7 @@ const data: HistoryItemProps[] = [
     avatar: 'https://i.pravatar.cc/160?img=8',
     placedBy: '0xD4a0...F6bD',
     date: 'March 12, 2021 at 1:25am',
-    amountVid: '654.50 OCTN',
+    amountVid: '654.50',
     amountUsd: '$321.55',
   },
   {
@@ -61,7 +62,7 @@ const data: HistoryItemProps[] = [
     avatar: 'https://i.pravatar.cc/160?img=1',
     placedBy: '@diana_prince',
     date: 'March 12, 2021 at 1:25am',
-    amountVid: '347.50 OCTN',
+    amountVid: '347.50',
     amountUsd: '$209.11',
   },
 ];

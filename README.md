@@ -1,6 +1,3 @@
-NB: First add the env-config file to the public folder
-
-
 # NFT-APP
 
 NFT marketplace front-end 

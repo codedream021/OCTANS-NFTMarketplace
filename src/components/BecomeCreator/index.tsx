@@ -5,15 +5,10 @@ import React from 'react';
 import * as S from './styles';
 import bg from './bg.jpg';
 import bg2x from './bg@2x.jpg';
-const options = {
-  scale: 1.2,
-  speed: 1000,
-  max: 30
-};
+
 const BecomeCreator = () => {
   return (
     <View paddingV={100}>
-      <Tilt options={options}>
       <Container>
         <S.Title>Welcome to the future of OCTANS economy.</S.Title>
         <S.Description>
@@ -26,7 +21,6 @@ const BecomeCreator = () => {
           </Button>
         </View>
       </Container>
-      </Tilt>
       <S.Bg>
         <img src={bg} srcSet={`${bg2x} 2x`} alt="" />
       </S.Bg>

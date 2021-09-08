@@ -50,7 +50,7 @@ function App() {
         <QueryClientProvider client={queryClient}>
           <GlobalStyles />
           <ScrollToTop />
-          <Header fixed={false} color={"transparent"} changeColorOnScroll={{height:0,color:"white"}} />
+          <Header fixed={true} color={"transparent"} changeColorOnScroll={{height:20,color:"white"}} />
           <Routes>
             <Route path={routes.home} element={<Home />} />
             <Route path="/drops" element={<Home />} />

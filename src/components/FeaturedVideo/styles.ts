@@ -14,11 +14,11 @@ export const Video = styled.div`
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06);
   border-radius: 20px;
   position: relative;
-  margin:auto;
+  margin: auto;
   @media (min-width: 768px) {
     height: 642.444px;
   }
-    video {
+  video {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -52,18 +52,21 @@ export const PlayBtn = styled.div`
 `;
 export const Content = styled.div`
   width: 90%;
-  margin:auto;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
-  background: #fff;
+  color: #fff;
+  margin: auto;
+  box-shadow: 0px 0px 35px 0px rgba(60, 186, 217, 0.75);
+  -webkit-box-shadow: 0px 0px 35px 0px rgba(60, 186, 217, 0.75);
+  -moz-box-shadow: 0px 0px 35px 0px rgba(60, 186, 217, 0.75);
+  background: #20252d;
   padding: 40px 40px 20px;
   border-radius: 30px;
   @media (max-width: 768px) {
-    margin-top:20px;
+    margin-top: 20px;
   }
   @media (min-width: 768px) {
     height: 642.444px;
   }
-  `;
+`;
 export const Nickname = styled.div`
   font-size: 24px;
   font-weight: 700;
@@ -85,12 +88,14 @@ export const Title = styled.div`
 export const Bid = styled.div`
   box-sizing: border-box;
   border-radius: 30px;
+  color: #fff;
 `;
 
 export const BidLabel = styled.div`
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 20px;
+  color: #41bedb;
 `;
 
 export const BidInfo = styled.div`
@@ -110,7 +115,7 @@ export const BidValue = styled.div`
 
 export const BidPrice = styled.div`
   font-size: 22px;
-  color: #17161a80;
+  color: #41bedb;
   margin-top: 20px;
 `;
 
@@ -123,4 +128,8 @@ export const BidBtns = styled.div`
       margin-right: 20px;
     }
   }
+`;
+
+export const DivCountdown = styled.div`
+  margin-left:25%;
 `;

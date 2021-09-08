@@ -6,6 +6,8 @@ import { useCreators } from 'api/spotlight';
 import { map } from 'lodash/fp';
 import BecomeCreator from 'components/Creators/BecomeCreator';
 import View from 'components/UI/View';
+import bg from './bg.jpg';
+import bg2x from './bg@2x.jpg';
 
 const renderItem = (creator: Creator) => {
   return (
@@ -18,8 +20,10 @@ const renderItem = (creator: Creator) => {
 const Creators = () => {
   const { data } = useCreators();
   return (
-    <View marginT={100}>
-      <List>
+    <View marginT={100} >
+      <List  style={{  
+  backgroundImage: "url(" + bg + ")"
+}}>
         <BecomeCreator />
         {map(renderItem, data)}
       </List>

@@ -12,6 +12,9 @@ import { Link } from 'react-router-dom';
 import { useStore } from 'store';
 import { useWeb3React } from '@web3-react/core';
 import { Grid } from '@material-ui/core';
+import OctansLogoSale from 'components/OctansLogoSale';
+
+
 const FeaturedVideo = ({ asset }: { asset: Asset }) => {
   const { account } = useWeb3React();
   const { openModal } = useStore('modalsStore');
@@ -56,19 +59,19 @@ const FeaturedVideo = ({ asset }: { asset: Asset }) => {
             <Grid container spacing={2}>
               <div>
                 <S.BidLabel>Current Bid</S.BidLabel>
-                <S.BidValue>{asset.instantSalePrice} OCTN</S.BidValue>
-                <S.BidPrice>$10,021.77</S.BidPrice>
+                <S.BidValue>123123123123<OctansLogoSale/></S.BidValue>
+                <S.BidPrice>($10,021.77)</S.BidPrice>
               </div>
-              <div>
+              <S.DivCountdown>
                 <S.BidLabel>Auction ending in</S.BidLabel>
                 <BidCountdown />
-              </div>
+              </S.DivCountdown>
             </Grid>
             <Grid
               container
               spacing={5}
               justify="space-around"
-              style={{ marginTop: '20px' }}
+              style={{ marginTop: '40px' }}
               alignItems="center"
             >
               <Button

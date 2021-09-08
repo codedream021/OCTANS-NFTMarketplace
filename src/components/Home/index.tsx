@@ -15,14 +15,16 @@ const Home = () => {
     <div>
       <Head>
         <Title>
-          The first marketplace&nbsp;
-          <span>dedicated to Octans NFTs.</span>
+          Welcome to &nbsp;
+          <span>Octans</span> NFTs.
         </Title>
         <FeaturedVideo asset={data[0]} />
       </Head>
       <Subscribe />
       <LiveAuctions />
-      <FeaturedVideos />
+      <FeaturedVideos name="Collection A" description="Sample Description for Collection A"/>
+      <FeaturedVideos name="Collection B" description="Sample Description for Collection B"/>
+      <FeaturedVideos name="Collection C" description="Sample Description for Collection C"/>
       <Creators />
       <BecomeCreator />
     </div>

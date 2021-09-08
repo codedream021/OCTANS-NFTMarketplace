@@ -5,6 +5,7 @@ import BidCountdown from 'components/BidCountdown';
 import { useStore } from 'store';
 import { Asset } from 'types/asset';
 import { useProfile } from 'api/account';
+import OctansLogoSale from 'components/OctansLogoSale';
 
 const Bid = ({ asset }: { asset: Asset }) => {
   const { data } = useProfile();
@@ -17,7 +18,7 @@ const Bid = ({ asset }: { asset: Asset }) => {
       <S.BidInfo>
         <div>
           <S.BidLabel>Current Bid</S.BidLabel>
-          <S.BidValue>{asset.instantSalePrice} OCTN</S.BidValue>
+          <S.BidValue>{asset.instantSalePrice}<OctansLogoSale/></S.BidValue>
           <S.BidPrice>$10,021.77</S.BidPrice>
         </div>
         {/*<div>*/}

@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
 `;
 
 export const SubscribeTitle = styled.div`
-  font-size: 66px;
+  font-size: 36px;
   font-weight: bold;
   text-align: center;
   color: #fff;
@@ -18,7 +18,7 @@ export const SubscribeTitle = styled.div`
 
 export const SubscribeDesc = styled.div`
   text-align: center;
-  font-size: 33px;
+  font-size: 28px;
   line-height: 46px;
   color: #fff;
   margin-bottom: 50px;

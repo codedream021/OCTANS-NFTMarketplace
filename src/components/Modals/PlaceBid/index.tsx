@@ -8,6 +8,7 @@ import Avatar from 'components/Avatar';
 import * as S from './styles';
 import { toFixedNoRound } from 'lib/utils';
 import { formatToken } from 'lib/units';
+import OctansLogoSale from 'components/OctansLogoSale';
 
 const PlaceBid = () => {
   const { vidBalance } = useStore('metamaskStore');
@@ -35,7 +36,7 @@ const PlaceBid = () => {
       </S.AssetPreview>
       <S.BidBlock>
         <S.MinBidTitle>You must bid at least</S.MinBidTitle>
-        <S.MinBid>501.00 OCTN</S.MinBid>
+        <S.MinBid>501.00<OctansLogoSale/></S.MinBid>
         <S.InputWrapper>
           <S.BidInput type="number" placeholder="0" min={0} />
           <S.VIDBadge>OCTN</S.VIDBadge>
@@ -44,7 +45,7 @@ const PlaceBid = () => {
       <S.USDValue>$0.00</S.USDValue>
       <S.Balance>
         <div>Your balance</div>
-        <div>{formattedVidBalance} OCTN</div>
+        <div>{formattedVidBalance}<OctansLogoSale/></div>
       </S.Balance>
       <View marginT={30} column>
         <Button>Place bid</Button>

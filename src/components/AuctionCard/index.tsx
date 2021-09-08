@@ -4,6 +4,8 @@ import Avatar from '../Avatar';
 import playIcon from 'icons/play.png';
 import { useNavigate } from 'react-router-dom';
 import { Asset } from 'types/asset';
+import OctansLogoSale from 'components/OctansLogoSale';
+import { Grid } from '@material-ui/core';
 
 const AuctionCard = ({
   horizontal = false,
@@ -33,7 +35,15 @@ const AuctionCard = ({
           <S.Name>@{username}</S.Name>
         </S.Author>
         <S.Title>{name}</S.Title>
-       
+        <Grid spacing={2}>
+          <div>
+            <S.BidLabel>Current Bid</S.BidLabel>
+            <S.BidValue>
+              123123123123<OctansLogoSale/>
+            </S.BidValue>
+            <S.BidPrice>($10,021.77)</S.BidPrice>
+          </div>
+        </Grid>
       </div>
     </S.Card>
   );

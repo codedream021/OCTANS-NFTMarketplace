@@ -3,7 +3,7 @@ import * as S from 'components/Modals/PutOnSale/styles';
 import View from 'components/UI/View';
 import Avatar from 'components/Avatar';
 import { Asset } from 'types/asset';
-
+import OctansLogoSale from 'components/OctansLogoSale';
 const AssetDescription = ({
   asset,
   balance,
@@ -39,7 +39,7 @@ const AssetDescription = ({
       </S.AssetPreview>
       <S.BidBlock>
         <S.MinBidTitle>Previous sale price was</S.MinBidTitle>
-        <S.MinBid>{asset.instantSalePrice} OCTN</S.MinBid>
+        <S.MinBid>{asset.instantSalePrice}<OctansLogoSale/></S.MinBid>
         <S.InputWrapper>
           <S.BidInput
             type="number"
@@ -48,14 +48,14 @@ const AssetDescription = ({
             value={price}
             onChange={(e) => setPrice(e.target.value)}
           />
-          <S.VIDBadge>OCTN</S.VIDBadge>
+          <S.VIDBadge><OctansLogoSale/></S.VIDBadge>
         </S.InputWrapper>
       </S.BidBlock>
       <S.MinBidTitle>We will charge 2.5%.</S.MinBidTitle>
       <S.USDValue>$0.00</S.USDValue>
       <S.Balance>
         <div>Your balance</div>
-        <div>{balance} OCTN</div>
+        <div>{balance}<OctansLogoSale/></div>
       </S.Balance>
     </>
   );

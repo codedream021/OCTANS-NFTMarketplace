@@ -20,6 +20,7 @@ import { useProfile } from 'api/account';
 import { Account } from 'types/account';
 import Spinner from 'components/UI/Spinner';
 import { Network, OpenSeaPort } from 'opensea-js';
+import OctansLogoSale from 'components/OctansLogoSale';
 
 const REACT_APP_TOKEN_ADDRESS = process.env.REACT_APP_TOKEN_ADDRESS as string;
 const BALANCE_FETCH_INTERVAL = 3000;
@@ -144,7 +145,7 @@ const ProfileBlock = () => {
           <View row onClick={toggle}>
             <Avatar name={profile?.address} src={profile?.profileImgUrl} />
             <View marginL={10} marginR={50}>
-              <S.Balance>{formattedEthBalance} OCTN</S.Balance>
+              <S.Balance>{formattedEthBalance}<OctansLogoSale></OctansLogoSale></S.Balance>
               <div>{cutAddress}</div>
             </View>
           </View>

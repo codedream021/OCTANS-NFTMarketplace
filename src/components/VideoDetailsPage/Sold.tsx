@@ -6,6 +6,7 @@ import Button from '../UI/Button';
 import { useStore } from 'store';
 import { useProfile } from 'api/account';
 import * as S from './styles';
+import OctansLogoSale from 'components/OctansLogoSale';
 
 const Sold = ({ asset }: { asset: Asset }) => {
   const { data } = useProfile();
@@ -18,7 +19,7 @@ const Sold = ({ asset }: { asset: Asset }) => {
       <S.BidInfo>
         <div>
           <S.BidLabel>Sold for</S.BidLabel>
-          <S.BidValue>{instantSalePrice} OCTN</S.BidValue>
+          <S.BidValue>{instantSalePrice}<OctansLogoSale/></S.BidValue>
           <S.BidPrice>$10,021.77</S.BidPrice>
         </div>
         <div>

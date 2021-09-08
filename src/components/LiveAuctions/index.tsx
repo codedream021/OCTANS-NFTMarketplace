@@ -29,7 +29,7 @@ const LiveAuctions = () => {
       </Container>
       {/* <S.List>{map(renderItem, data)}</S.List> */}
 
-      <Swiper {...paramsWithMaxAndMin(3, 1)}>
+      <Swiper {...paramsWithMaxAndMin(4, 1)}>
         {data?.map((asset: Asset) => {
           return (
             <div key={asset.id}>

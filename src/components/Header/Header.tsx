@@ -103,7 +103,7 @@ const Header: React.FC<Props> = ({
       <Link to="/">
         <S.Logo>
           <img
-            style={{ maxWidth: '40px', verticalAlign: 'middle' }}
+            style={{ maxWidth: '210px', verticalAlign: 'middle' }}
             src={logo}
             srcSet={`${logo2x} 2x`}
             alt="Octans NFT"

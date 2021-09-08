@@ -39,7 +39,7 @@ const Certificate = (props: any) => {
   const { data } = props;
   const certificates = useRef<CertificateItem[]>([
     {
-      name: 'View on Etherscan',
+      name: 'View on BscScan',
       icon: Octans,
       link: `https://rinkeby.etherscan.io/token/${data.assetContract.address}?a=${data.tokenId}`,
     }

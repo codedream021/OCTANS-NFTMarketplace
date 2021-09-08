@@ -164,7 +164,7 @@ export const GlobalStyles = createGlobalStyle`
     color: #fff;
     background: #1F232B;
     color: #17161a;
-    font-family: 'IBM Plex Mono', monospace, system-ui, sans-serif;
+    font-family: 'Roboto', monospace, system-ui, sans-serif;
     font-feature-settings: 'kern', 'liga', 'calt';
   }
   button {

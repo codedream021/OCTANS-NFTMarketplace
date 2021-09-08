@@ -10,6 +10,24 @@ export const PlayIcon = styled.img`
   width: 80px;
   height: 80px;
 `;
+export const BidValue = styled.div`
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+`;
+export const BidLabel = styled.div`
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #fff;
+`;
+
+
+export const BidPrice = styled.div`
+  font-size: 22px;
+  color: #fff;
+  margin-top: 20px;
+`;
 
 export const Thumb = styled.div`
   border-radius: 20px;
@@ -39,7 +57,7 @@ export const Author = styled.div`
   cursor: pointer;
   transition: color 0.15s ease-in-out;
   &:hover {
-    color: #7f4acb;
+    color: #fff;
   }
 `;
 
@@ -76,7 +94,7 @@ export const Info = styled.div`
 `;
 
 export const InfoTitle = styled.div`
-  color: #88888b;
+  color: #fff;
   margin-bottom: 20px;
 `;
 

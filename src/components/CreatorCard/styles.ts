@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const Card = styled(Link)`
   display: block;
-  background: #fff;
+  background: #20252D;
   border: 1px solid #edf0f4;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06);
   border-radius: 30px;
@@ -30,6 +30,7 @@ export const Content = styled.div`
 export const Name = styled.div`
   font-size: 24px;
   font-weight: 700;
+  color:#fff;
   margin-top: 45px;
   margin-bottom: 20px;
   @media (max-width: 768px) {
