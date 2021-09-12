@@ -2,7 +2,7 @@ import api from './index';
 
 const routes = {
   signupPath() {
-    return 'accounts';
+    return 'account';
   },
   noncePath(address: string) {
     return [this.signupPath(), address, 'nonce'].join('/');
