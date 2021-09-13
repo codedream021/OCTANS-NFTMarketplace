@@ -64,7 +64,7 @@ const Footer = () => {
         <S.Inner>
           <div>
             <View marginB={50}>
-              <img src={logo} width={80} height={80} alt="VideCoin" />
+              <img src={logo} width={80} height={80} alt="Octans NFT" />
             </View>
             <S.Copyright>
               © 2021, OctansNFT. <br />

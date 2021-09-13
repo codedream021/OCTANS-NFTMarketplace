@@ -6,6 +6,7 @@ export const Footer = styled.div`
   color: #fff;
   position: relative;
   z-index: 1;
+  margin-top: 50px;
 `;
 
 export const Inner = styled.div`
