@@ -32,7 +32,7 @@ export const NavBar = styled.div`
   left: 50%;
   transform: translateX(-50%);
   a {
-    height: 40px;
+    height: 60px;
     display: inline-flex;
     align-items: center;
     justify-content: center;

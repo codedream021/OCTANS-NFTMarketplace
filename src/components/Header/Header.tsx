@@ -99,18 +99,23 @@ const Header: React.FC<Props> = ({
     setMobileOpen(!mobileOpen);
   };
 
-  const logo1 =
-      <Link to="/">
-        <S.Logo>
-          <img
-            style={{ maxWidth: '210px', verticalAlign: 'middle' }}
-            src={logo}
-            srcSet={`${logo2x} 2x`}
-            alt="Octans NFT"
-          />
-        </S.Logo>
-      </Link>
-    
+  const logo1 = (
+    <Link to="/">
+      <S.Logo>
+        <img
+          style={{
+            maxHeight: '70px',
+            maxWidth: '210px',
+            verticalAlign: 'middle',
+          }}
+          src={logo}
+          srcSet={`${logo2x} 2x`}
+          alt="Octans NFT"
+        />
+      </S.Logo>
+    </Link>
+  );
+
   const appBarClasses = classNames({
     // [classes.appBar]: true,
     [classes[color]]: color,
@@ -151,14 +156,16 @@ const Header: React.FC<Props> = ({
           onClose={handleDrawerToggle}
         >
           <div className={classes.appResponsive}>
-                <IconButton className={classes.closeIcon} onClick={handleDrawerToggle}>
-                  <CloseIcon color="primary"  />
-                </IconButton>
-              
-           
-           <div style={{marginTop:"50px"}}>
-           <HeaderLinks handleDrawerToggle={handleDrawerToggle} />
-           </div>
+            <IconButton
+              className={classes.closeIcon}
+              onClick={handleDrawerToggle}
+            >
+              <CloseIcon color="primary" />
+            </IconButton>
+
+            <div style={{ marginTop: '50px' }}>
+              <HeaderLinks handleDrawerToggle={handleDrawerToggle} />
+            </div>
           </div>
         </Drawer>
       </Hidden>

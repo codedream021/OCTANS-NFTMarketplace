@@ -2,9 +2,10 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const ProfileBlock = styled.div`
-  background: #ffffff;
-  border: 1px solid #edf0f4;
-  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06);
+  background: #15181D;
+  border: 1px solid #40BDDC;
+  -webkit-box-shadow:-1px 1px 15px 2px rgb(0 169 204 / 40%) ;
+  box-shadow:-1px 1px 15px 2px rgb(0 169 204 / 40%);
   border-radius: 30px;
   font-size: 20px;
   line-height: 24px;
