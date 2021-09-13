@@ -5,7 +5,7 @@ import { store } from 'App';
 
 const baseURL = process.env.REACT_APP_BASE_URL;
 const token = localStorage.getItem('token');
-console.log({token})
+console.log({ token });
 const defaultTransformers = (
   transformRequest?: AxiosTransformer | AxiosTransformer[]
 ): AxiosTransformer[] => {
@@ -22,7 +22,9 @@ const defaultTransformers = (
 const api = axios.create({
   baseURL,
   headers: {
-    ...(true && { Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoxLCJleHAiOjE2NjE1MDA3NDUsInN1YiI6ImIyZGYyZmY5LWMwZWItNGIyNy00M2U4LTNlYTRkMzViNWIxMSJ9.nFvZoYgtEN9e6dFN6rd5anSS23fSaV-8mNDq3cavirU` }),
+    ...(token && {
+      Authorization: `Bearer ${token}`,
+    }),
   },
   transformRequest: [
     (data: any): unknown => {
