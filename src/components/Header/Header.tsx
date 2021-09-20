@@ -110,14 +110,14 @@ const Header: React.FC<Props> = ({
           }}
           src={logo}
           srcSet={`${logo2x} 2x`}
-          alt="Octans NFT"
+          alt="Octa NFT"
         />
       </S.Logo>
     </Link>
   );
 
   const appBarClasses = classNames({
-    // [classes.appBar]: true,
+    [classes.appBar]: true,
     [classes[color]]: color,
     [classes.absolute]: absolute,
     [classes.fixed]: fixed,

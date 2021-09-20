@@ -67,7 +67,7 @@ const ProfileBlock = () => {
     getTokenBalance();
     getEthBalance();
   }, [account, chainId, getEthBalance, getTokenBalance, library, token]);
-  
+
   const auth = async () => {
     if (!account) return;
     const authToken = localStorage.getItem('token');
@@ -159,7 +159,7 @@ const ProfileBlock = () => {
       );
     }
     return (
-      <Button style={{ marginTop: '10px' }} onClick={connectWallet}>
+      <Button size={'sm'} theme={'gradient'} onClick={connectWallet}>
         Connect Wallet
       </Button>
     );
