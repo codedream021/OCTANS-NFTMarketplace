@@ -163,7 +163,7 @@ export const GlobalStyles = createGlobalStyle`
     min-height: 100vh;
     color: #fff;
     background: #1F232B;
-    color: #17161a;
+    color: #fff;
     font-family: 'Roboto', monospace, system-ui, sans-serif;
     font-feature-settings: 'kern', 'liga', 'calt';
   }
