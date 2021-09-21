@@ -30,11 +30,13 @@ export default makeStyles((theme) => ({
   black: {},
 
   appBar: {
+    maxHeight: '88px',
+    left: '0.65px',
+    top: '0px',
     display: 'flex',
-    border: '0',
+    border: '1px solid #FCFCFC',
     borderRadius: '3px',
     padding: '0.625rem 0',
-    marginBottom: '20px',
     color: '#555',
     width: '100%',
     backgroundColor: '#fff',
@@ -82,7 +84,8 @@ export default makeStyles((theme) => ({
     width: '100%',
   },
   flex: {
-    flex: 1,
+    display: 'flex',
+    alignItems: 'center',
   },
   appResponsive: {
     margin: '20px 10px',
@@ -142,7 +145,7 @@ export default makeStyles((theme) => ({
   drawerPaper: {
     border: 'none',
     bottom: '0',
-    background:"#1F232B",
+    background: '#1F232B',
     transitionProperty: 'top, bottom, width',
     transitionDuration: '.2s, .2s, .35s',
     transitionTimingFunction: 'linear, linear, ease',

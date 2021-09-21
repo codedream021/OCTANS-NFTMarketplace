@@ -67,6 +67,7 @@ const ProfileBlock = () => {
     getTokenBalance();
     getEthBalance();
   }, [account, chainId, getEthBalance, getTokenBalance, library, token]);
+
   const auth = async () => {
     if (!account) return;
     const authToken = localStorage.getItem('token');
@@ -89,7 +90,7 @@ const ProfileBlock = () => {
     const { token } = await authApi.auth(account, signature);
     localStorage.setItem('token', token);
     localStorage.setItem('account', account);
-    console.log({token});
+    console.log({ token });
     setTokenHeader(token);
     updateOpenSea();
     refetch();
@@ -120,8 +121,8 @@ const ProfileBlock = () => {
   const formattedEthBalance = toFixedNoRound(formatEther(ethBalance), 2);
 
   const renderMetaMaskData = () => {
-    console.log({isMetamaskInstalled});
-    console.log({isFetchedAfterMount});
+    console.log({ isMetamaskInstalled });
+    console.log({ isFetchedAfterMount });
     if (isFetching && !isFetchedAfterMount) {
       return (
         <div>
@@ -145,7 +146,10 @@ const ProfileBlock = () => {
           <View row onClick={toggle}>
             <Avatar name={profile?.address} src={profile?.profileImgUrl} />
             <View marginL={10} marginR={50}>
-              <S.Balance>{formattedEthBalance}<OctansLogoSale></OctansLogoSale></S.Balance>
+              <S.Balance>
+                {formattedEthBalance}
+                <OctansLogoSale></OctansLogoSale>
+              </S.Balance>
               <div>{cutAddress}</div>
             </View>
           </View>
@@ -154,7 +158,11 @@ const ProfileBlock = () => {
         </S.ProfileBlock>
       );
     }
-    return <Button onClick={connectWallet}>Connect Wallet</Button>;
+    return (
+      <Button size={'sm'} theme={'gradient'} onClick={connectWallet}>
+        Connect Wallet
+      </Button>
+    );
   };
   return renderMetaMaskData();
 };

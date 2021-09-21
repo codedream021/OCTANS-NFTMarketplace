@@ -15,6 +15,7 @@ import NavBar from './NavBar';
 import ProfileBlock from './ProfileBlock';
 import HeaderLinks from './HeaderLinks/HeaderLinks';
 import CloseIcon from '@material-ui/icons/Close';
+import SearchBar from './SearchBar';
 
 type Props = {
   color:
@@ -53,6 +54,7 @@ const Header: React.FC<Props> = ({
   const classes = useStyle();
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [isScrolled, setIsScrolled] = React.useState(false);
+  const [q, setQ] = React.useState('');
   const headerColorChange = React.useCallback(
     (event) => {
       const windowsScrollTop = event.detail.scrollTop;
@@ -99,20 +101,25 @@ const Header: React.FC<Props> = ({
     setMobileOpen(!mobileOpen);
   };
 
-  const logo1 =
-      <Link to="/">
-        <S.Logo>
-          <img
-            style={{ maxWidth: '210px', verticalAlign: 'middle' }}
-            src={logo}
-            srcSet={`${logo2x} 2x`}
-            alt="Octans NFT"
-          />
-        </S.Logo>
-      </Link>
-    
+  const logo1 = (
+    <Link to="/">
+      <S.Logo>
+        <img
+          style={{
+            maxHeight: '70px',
+            maxWidth: '210px',
+            verticalAlign: 'middle',
+          }}
+          src={logo}
+          srcSet={`${logo2x} 2x`}
+          alt="Octa NFT"
+        />
+      </S.Logo>
+    </Link>
+  );
+
   const appBarClasses = classNames({
-    // [classes.appBar]: true,
+    [classes.appBar]: true,
     [classes[color]]: color,
     [classes.absolute]: absolute,
     [classes.fixed]: fixed,
@@ -136,7 +143,10 @@ const Header: React.FC<Props> = ({
         </div>
 
         <Hidden smDown implementation="css">
-          <NavBar />
+          <div className={classes.flex}>
+            <SearchBar onSearch={setQ} isFetching={false} />
+            <NavBar />
+          </div>
         </Hidden>
         <ProfileBlock />
       </Toolbar>
@@ -151,14 +161,16 @@ const Header: React.FC<Props> = ({
           onClose={handleDrawerToggle}
         >
           <div className={classes.appResponsive}>
-                <IconButton className={classes.closeIcon} onClick={handleDrawerToggle}>
-                  <CloseIcon color="primary"  />
-                </IconButton>
-              
-           
-           <div style={{marginTop:"50px"}}>
-           <HeaderLinks handleDrawerToggle={handleDrawerToggle} />
-           </div>
+            <IconButton
+              className={classes.closeIcon}
+              onClick={handleDrawerToggle}
+            >
+              <CloseIcon color="primary" />
+            </IconButton>
+
+            <div style={{ marginTop: '50px' }}>
+              <HeaderLinks handleDrawerToggle={handleDrawerToggle} />
+            </div>
           </div>
         </Drawer>
       </Hidden>

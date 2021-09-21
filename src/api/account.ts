@@ -4,7 +4,7 @@ import { useQuery } from 'react-query';
 
 const routes = {
   get basePath() {
-    return '/account';
+    return '/profile';
   },
 };
 
