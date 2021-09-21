@@ -88,7 +88,6 @@ const ButtonBase = styled.button<{ size: Size; btnTheme: Theme }>`
   ${({ size }) => sizes[size]};
   ${({ btnTheme }) => themes[btnTheme]};
   white-space: nowrap;
-  text-transform: uppercase;
   transition: all 0.2s;
   box-shadow: inset 0 1px 0 #fff, 0 2px 0 rgb(0 0 0 / 22%),
     1px 4px 4px 2px rgb(00 0 / 30%);
@@ -102,7 +101,6 @@ const ButtonBase = styled.button<{ size: Size; btnTheme: Theme }>`
   zoom: 1;
   border: 1px solid transparent;
   text-align: center;
-  text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.2s;
