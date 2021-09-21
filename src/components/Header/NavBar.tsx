@@ -10,20 +10,16 @@ interface Link {
 
 const menu: Link[] = [
   {
-    path: '/',
-    name: 'Home',
+    path: '/explore',
+    name: 'Explore',
   },
   {
-    path: '/videos',
-    name: 'Browse',
+    path: '/blog',
+    name: 'Blog',
   },
   {
-    path: '/collections',
-    name: 'Collections',
-  },
-  {
-    path: '/creators',
-    name: 'Creators',
+    path: '/about',
+    name: 'About',
   },
 ];
 

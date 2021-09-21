@@ -22,34 +22,61 @@ Root.defaultProps = {
 
 export const NavBar = styled.div`
   position: absolute;
-  background: #15181d;
-  border: 1px solid #40bddc;
+  padding: 10px;
+  left: 75%;
+  transform: translateX(-75%);
+  a {
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 28px;
+    height: 26px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    padding: 5px;
+    min-width: 48px;
+    border-radius: 12px;
+    color: #1f232b;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+    &.active {
+      background-color: #3dbbd8;
+      color: #1f232b;
+      border-radius: 12px;
+    }
+  }
+`;
+
+export const SearchBar = styled.div`
+  position: absolute;
   box-sizing: border-box;
   -webkit-box-shadow: -1px 1px 15px 2px rgb(0 169 204 / 40%);
   box-shadow: -1px 1px 15px 2px rgb(0 169 204 / 40%);
   border-radius: 12px;
   border-radius: 30px;
   padding: 10px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 75%;
+  transform: translateX(-75%);
   a {
-    height: 60px;
+    height: 26px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 16px;
     padding: 5px;
-    min-width: 110px;
-    font-weight: 700;
-    background: #343539;
+    min-width: 48px;
+    font-weight: 400;
     border-radius: 12px;
-    color: white;
+    color: #1f232b;
     &:not(:last-child) {
-      margin-right: 10px;
+      margin-right: 30px;
     }
     &.active {
       background-color: #40bddc;
-      color: #fff;
+      color: #1f232b;
       border-radius: 12px;
     }
   }

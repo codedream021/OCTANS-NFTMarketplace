@@ -15,6 +15,7 @@ import NavBar from './NavBar';
 import ProfileBlock from './ProfileBlock';
 import HeaderLinks from './HeaderLinks/HeaderLinks';
 import CloseIcon from '@material-ui/icons/Close';
+import SearchBar from './SearchBar';
 
 type Props = {
   color:
@@ -53,6 +54,7 @@ const Header: React.FC<Props> = ({
   const classes = useStyle();
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [isScrolled, setIsScrolled] = React.useState(false);
+  const [q, setQ] = React.useState('');
   const headerColorChange = React.useCallback(
     (event) => {
       const windowsScrollTop = event.detail.scrollTop;
@@ -141,7 +143,10 @@ const Header: React.FC<Props> = ({
         </div>
 
         <Hidden smDown implementation="css">
-          <NavBar />
+          <div className={classes.flex}>
+            <SearchBar onSearch={setQ} isFetching={false} />
+            <NavBar />
+          </div>
         </Hidden>
         <ProfileBlock />
       </Toolbar>
