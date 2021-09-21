@@ -7,15 +7,15 @@ const renderer = ({ formatted }: CountdownRenderProps) => {
     <S.Countdown>
       <S.CountdownItem>
         <S.CountdownValue>{formatted.hours}</S.CountdownValue>
-        <S.CountdownLabel>HH</S.CountdownLabel>
+        <S.CountdownLabel>Hours</S.CountdownLabel>
       </S.CountdownItem>
       <S.CountdownItem>
         <S.CountdownValue>{formatted.minutes}</S.CountdownValue>
-        <S.CountdownLabel>MM</S.CountdownLabel>
+        <S.CountdownLabel>Minutes</S.CountdownLabel>
       </S.CountdownItem>
       <S.CountdownItem>
         <S.CountdownValue>{formatted.seconds}</S.CountdownValue>
-        <S.CountdownLabel>SS</S.CountdownLabel>
+        <S.CountdownLabel>Seconds</S.CountdownLabel>
       </S.CountdownItem>
     </S.Countdown>
   );

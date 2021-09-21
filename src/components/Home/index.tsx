@@ -16,10 +16,6 @@ const Home = () => {
     <div>
       <BannerSection />
       <Head>
-        <Title>
-          Welcome to &nbsp;
-          <span>Octans</span> NFTs.
-        </Title>
         <FeaturedVideo asset={data[0]} />
       </Head>
       <Subscribe />
