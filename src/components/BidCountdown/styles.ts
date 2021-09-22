@@ -3,17 +3,19 @@ import styled from 'styled-components';
 export const Countdown = styled.div`
   display: flex;
 `;
-export const CountdownItem = styled.div`
-  width: 68px;
+export const CountdownItem = styled.div<{ isAuctionCard?: boolean }>`
+  width: ${({ isAuctionCard = false }) => (isAuctionCard ? '35px' : '68px')};
 `;
-export const CountdownValue = styled.div`
+export const CountdownValue = styled.div<{ isAuctionCard?: boolean }>`
   margin-bottom: 20px;
   font-family: Work Sans;
   font-style: normal;
   font-weight: 600;
-  font-size: 40px;
-  line-height: 32px;
-  color: #1F232B;
+  font-size: ${({ isAuctionCard = false }) =>
+    isAuctionCard ? '16px' : '40px'};
+  line-height: ${({ isAuctionCard = false }) =>
+    isAuctionCard ? '16px' : '32px'};
+  color: #1f232b;
 `;
 export const CountdownLabel = styled.div`
   font-family: Work Sans;

@@ -2,16 +2,13 @@ import React from 'react';
 import * as S from './styles';
 import View from 'components/UI/View';
 import Avatar from 'components/Avatar';
-import { ReactComponent as ShareIcon } from 'icons/share.svg';
 import BidCountdown from 'components/BidCountdown';
 import Button from 'components/UI/Button';
 import { Asset } from 'types/asset';
-import IconButton from 'components/UI/IconButton';
 import { Link } from 'react-router-dom';
 import { useStore } from 'store';
 import { useWeb3React } from '@web3-react/core';
 import { Grid } from '@material-ui/core';
-import OctansLogoSale from 'components/OctansLogoSale';
 import nft from './assets/nft_1.png';
 
 const FeaturedVideo = ({ asset }: { asset: Asset }) => {

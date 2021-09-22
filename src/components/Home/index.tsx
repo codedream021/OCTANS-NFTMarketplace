@@ -18,20 +18,15 @@ const Home = () => {
       <Head>
         <FeaturedVideo asset={data[0]} />
       </Head>
-      <Subscribe />
-      <LiveAuctions />
-      <FeaturedVideos
-        name="Collection A"
-        description="Sample Description for Collection A"
+      <LiveAuctions
+        title={'Trending Auctions'}
+        linkText={'View all Auctions'}
       />
-      <FeaturedVideos
-        name="Collection B"
-        description="Sample Description for Collection B"
+      <LiveAuctions
+        title={'Featured Artworks'}
+        linkText={'View all Artworks'}
       />
-      <FeaturedVideos
-        name="Collection C"
-        description="Sample Description for Collection C"
-      />
+
       <Creators />
       <BecomeCreator />
     </div>

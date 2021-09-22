@@ -7,7 +7,8 @@ import { Asset } from 'types/asset';
 import * as S from './styles';
 import Swiper from 'react-id-swiper';
 import { paramsWithMaxAndMin } from 'helpers/consts';
-import "swiper/css/swiper.css";
+import { NavLink } from 'react-router-dom';
+import 'swiper/css/swiper.css';
 
 // const renderItem = (asset: Asset) => {
 //   return (
@@ -17,14 +18,27 @@ import "swiper/css/swiper.css";
 //   );
 // };
 
-const LiveAuctions = () => {
+const LiveAuctions = ({
+  title,
+  linkText,
+}: {
+  title: string;
+  linkText: string;
+}) => {
   const { data } = useLive();
   return (
-    <>
+    <S.LiveAuctionWrapper>
       <Container>
         <S.Header>
-          <S.Title>Live auctions</S.Title>
-          <Button size="sm" theme="secondary">View all live auctions</Button>
+          <S.Title>{title}</S.Title>
+          <NavLink
+            end
+            to={'/auctions'}
+            key={'View all Auctions'}
+            style={{ color: '#1F232B' }}
+          >
+            {linkText}
+          </NavLink>
         </S.Header>
       </Container>
       {/* <S.List>{map(renderItem, data)}</S.List> */}
@@ -38,7 +52,7 @@ const LiveAuctions = () => {
           );
         })}
       </Swiper>
-    </>
+    </S.LiveAuctionWrapper>
   );
 };
 
