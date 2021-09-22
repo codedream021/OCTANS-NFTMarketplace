@@ -5,6 +5,15 @@ export const paramsWithMaxAndMin = (max: number, min: number) => {
     observer: true,
     observeParents: true,
     speed: 500,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
     shouldSwiperUpdate: true,
     rebuildOnUpdate: true,
     spaceBetween: 15,

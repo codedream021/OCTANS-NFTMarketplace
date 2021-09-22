@@ -23,3 +23,29 @@ code {
   font-family: 'SpaceAge';
   src: local('SpaceAge'), url("./extrafonts/spaceage.ttf") format('truetype');
 }
+
+
+.swiper-pagination {
+  margin-top: 48.57px;
+  position: unset !important;
+}
+
+.swiper-pagination-bullet {
+  padding: 2px;
+  background: gray !important;
+  width: 20px !important;
+  height: 20px!important;
+  vertical-align: middle;
+
+  box-shadow: 4px 2px 15px rgba(0, 0, 0, 0.1);
+  /* border-color: transparent !important; */
+}
+
+.swiper-pagination-bullet-active {
+  width: 12px!important;
+  height: 14px!important;
+  padding: 5px;
+  box-shadow: 4px 2px 15px rgba(0, 0, 0, 0.1);
+  border: 10px solid #ffffff !important;
+  background: linear-gradient(90deg, #3CBAD9 0%, #4FCFEF 100%) !important;
+}
