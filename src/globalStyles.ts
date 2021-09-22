@@ -61,7 +61,6 @@ export const GlobalStyles = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     line-height: 1;
-    background: #1F232B;
   }
   a {
     background: transparent;
@@ -161,8 +160,6 @@ export const GlobalStyles = createGlobalStyle`
   }
   body {
     min-height: 100vh;
-    color: #fff;
-    background: #1F232B;
     color: #fff;
     font-family: 'Roboto', monospace, system-ui, sans-serif;
     font-feature-settings: 'kern', 'liga', 'calt';
