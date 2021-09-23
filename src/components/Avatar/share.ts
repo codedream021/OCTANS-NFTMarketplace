@@ -3,6 +3,7 @@ export type Size = 'xxs' | 'sm' | 'md' | 'lg' | 'xl';
 export interface AvatarProps {
   src?: string;
   size?: Size;
+  isCreatorPage?: boolean;
   name: string;
 }
 

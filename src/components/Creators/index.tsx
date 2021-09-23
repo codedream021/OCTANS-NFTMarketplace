@@ -8,26 +8,40 @@ import BecomeCreator from 'components/Creators/BecomeCreator';
 import View from 'components/UI/View';
 import bg from './bg.jpg';
 import bg2x from './bg@2x.jpg';
+import * as S from './styles';
+import Container from 'components/UI/Container';
+import { NavLink } from 'react-router-dom';
+import { Grid } from '@material-ui/core';
 
 const renderItem = (creator: Creator) => {
   return (
-    <div key={creator.id}>
+    <Grid item xs={12} md={6} lg={3}  key={creator.id}>
       <CreatorCard creator={creator} />
-    </div>
+    </Grid>
   );
 };
 
 const Creators = () => {
   const { data } = useCreators();
   return (
-    <View marginT={100} >
-      <List  style={{  
-  backgroundImage: "url(" + bg + ")"
-}}>
-        <BecomeCreator />
+    <S.FeaturedCreatorsWrapper>
+            <Container>
+        <S.Header>
+          <S.Title>Featured Creators</S.Title>
+          <NavLink
+            end
+            to={'/creators'}
+            key={'View all Creators'}
+            style={{ color: '#1F232B' }}
+          >
+            View all Creators
+          </NavLink>
+        </S.Header>
+      </Container>
+      <Grid container spacing={3}>
         {map(renderItem, data)}
-      </List>
-    </View>
+      </Grid>
+    </S.FeaturedCreatorsWrapper>
   );
 };
 

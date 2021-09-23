@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 
 export const Card = styled(Link)`
   display: block;
-  background: #20252D;
+  background: #fff;
   border: 1px solid #edf0f4;
+  min-height: 436px;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06);
   border-radius: 30px;
 `;
@@ -23,37 +24,101 @@ export const Bg = styled.div`
 
 export const Content = styled.div`
   padding: 0 30px 46px;
-  margin-top: -50px;
   position: relative;
+  background: #ffffff;
+  border: 1px solid #f5f5f5;
+  color: #656772;
+  box-sizing: border-box;
 `;
+export const CardFooter = styled.div`
+  padding: 0 30px;
+  border-top: 1px solid #f5f5f5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #f5f5f5;
+`;
+export const Followers = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: 10px;
+  padding: 30px 0;
+  align-items: flex-start;
+  span {
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: right;
+    margin-top: 10px;
+    color: #656772;
+  }
+`;
+export const Number = styled.div`
+font-family: Work Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 16px;
+color: #1F232B;
+`;
+export const FollowButton = styled.button`
+  border: 1px solid #f5f5f5;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  color: #3cbad9;
 
+  background: #FFFFFF;
+border: 2px solid #3CBAD9;
+box-sizing: border-box;
+border-radius: 50px;
+`;
 export const Name = styled.div`
   font-size: 24px;
   font-weight: 700;
-  color:#fff;
-  margin-top: 45px;
-  margin-bottom: 20px;
+  color: #656772;
+  margin-top: 15px;
+  margin-bottom: 10px;
   @media (max-width: 768px) {
     font-size: 18px;
   }
 `;
 
 export const Nickname = styled.div`
-  font-size: 32px;
-  line-height: 40px;
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
   white-space: nowrap;
   display: inline-block;
-  font-weight: 700;
-  background: linear-gradient(
-    270deg,
-    #7549d4 0%,
-    #e2486a 35.94%,
-    #ed6858 69.79%,
-    #f09051 100%
-  );
+  background: #3cbad9;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   @media (max-width: 768px) {
     font-size: 22px;
+  }
+`;
+export const Description = styled.div`
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 10px;
+  color: #656772;
+  @media (max-width: 768px) {
+    font-size: 12px;
   }
 `;

@@ -9,13 +9,28 @@ const CreatorCard = ({ creator }: { creator: Creator }) => {
   return (
     <S.Card to={`/creators/${id}`}>
       <S.Bg>
-        <img src="http://placehold.co/300x300" alt="" />
+        <img src="/images/creator.png" alt="" />
       </S.Bg>
       <S.Content>
-        <Avatar size="lg" name={address} src={profileImgUrl} />
-        <S.Name>{name}</S.Name>
-        <S.Nickname>@{username}</S.Nickname>
+        <Avatar size="sm" name={address} isCreatorPage={true} src={profileImgUrl} />
+        <S.Name>{name || "Name"}</S.Name>
+        <S.Nickname>@{username} </S.Nickname>
+        <S.Description>
+          Ut quo agam sonet debitis. Nec putent officiis ut. No alia legere
+          habemus qui. Summo intellegat ad mei, ut sea munere laoreet indoctum.
+        </S.Description>
       </S.Content>
+      <S.CardFooter>
+          <S.Followers>
+            <S.Number>1259</S.Number>
+            <span>
+              Followers
+            </span>
+          </S.Followers>
+          <S.FollowButton>
+            Follow
+          </S.FollowButton>
+        </S.CardFooter>
     </S.Card>
   );
 };

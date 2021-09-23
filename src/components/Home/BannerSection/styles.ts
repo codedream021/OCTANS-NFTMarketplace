@@ -8,14 +8,11 @@ export const BannerSectionWrapper = styled.div`
   width: 100%;
   height: 500px;
   background: url(${Giveaway_Header});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   & .crsl--content {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border-radius: 40px;
-    overflow: hidden;
+    height: 100%;
     background: linear-gradient(
       90deg,
       rgba(12, 12, 10, 0.9) 0%,
@@ -23,13 +20,14 @@ export const BannerSectionWrapper = styled.div`
       rgba(12, 12, 10, 0) 100%
     );
 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+   
     & .crsl--text {
       max-width: 470px;
       width: 470px;
       margin-left: 215px;
+      @media (max-width: 768px) {
+        margin-left: 0;
+      }
       margin-top: 140px;
       & .crsl__hd {
         max-width: 100%;

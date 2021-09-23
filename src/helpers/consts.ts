@@ -10,10 +10,6 @@ export const paramsWithMaxAndMin = (max: number, min: number) => {
       type: 'bullets',
       clickable: true
     },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    },
     shouldSwiperUpdate: true,
     rebuildOnUpdate: true,
     spaceBetween: 15,
