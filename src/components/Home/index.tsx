@@ -8,6 +8,7 @@ import Creators from '../Creators';
 import FeaturedVideo from 'components/FeaturedVideo';
 import { useFeatured } from 'api/spotlight';
 import BannerSection from './BannerSection';
+import CreativeEconomy from 'components/CreativeEconomy';
 
 const Home = () => {
   const { data } = useFeatured();
@@ -28,7 +29,8 @@ const Home = () => {
       />
 
       <Creators />
-      <BecomeCreator />
+      {/* <BecomeCreator /> */}
+      <CreativeEconomy/>
     </div>
   );
 };

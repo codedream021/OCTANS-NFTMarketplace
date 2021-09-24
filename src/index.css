@@ -35,9 +35,10 @@ code {
 
 .swiper-pagination-bullet {
   padding: 2px;
-  background: gray !important;
-  width: 20px !important;
-  height: 20px!important;
+  background: #E7F0F9 !important;
+  width: 16px !important;
+  opacity: 1 !important;
+  height: 16px!important;
   vertical-align: middle;
   box-shadow: 4px 2px 15px rgba(0, 0, 0, 0.1);
 }
@@ -50,7 +51,7 @@ code {
   background: transparent!important;
   height: 20px!important;
   vertical-align: middle;
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 .crsl--content .swiper-pagination-bullet-active {
@@ -58,6 +59,8 @@ code {
   height: 20px!important;
   background: linear-gradient(90deg, #3CBAD9 0%, #4FCFEF 100%) !important;
   border-radius: 50px !important;
+  opacity: 1 !important;
+
 }
 .swiper-pagination-bullet-active {
   width: 12px!important;

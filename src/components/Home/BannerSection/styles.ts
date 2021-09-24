@@ -12,6 +12,9 @@ export const BannerSectionWrapper = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   & .crsl--content {
+    @media (min-width: 768px) {
+      width: 70%;
+    }
     height: 100%;
     background: linear-gradient(
       90deg,

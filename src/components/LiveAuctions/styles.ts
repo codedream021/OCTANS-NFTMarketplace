@@ -47,4 +47,7 @@ export const LiveAuctionWrapper = styled.div`
   margin: 0px auto;
   margin-bottom: 100px;
   background: #fff;
+  & > .swiper-container {
+    padding-bottom: 20px;
+  }
 `;

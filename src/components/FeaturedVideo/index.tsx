@@ -35,9 +35,7 @@ const FeaturedVideo = ({ asset }: { asset: Asset }) => {
         <S.Content>
           <View row centerV marginB={46} className="content__border">
             <Avatar
-              src={
-                'https://bafkreiecuo4clslx2zzd2mntfp7e5uppenaff4ksw54ss5kow6z4ujsfvq.ipfs.dweb.link'
-              }
+              src={'/images/hcphotos-Headshots-1 1.png'}
               size="sm"
               name={owner.address}
             />
@@ -56,42 +54,18 @@ const FeaturedVideo = ({ asset }: { asset: Asset }) => {
                 <BidCountdown />
               </S.DivCountdown>
             </Grid>
-            <Grid
-              container
-              justify="space-between"
-              style={{ marginTop: '20px' }}
-              alignItems="center"
-            >
-              <Button
-                size="sm"
-                onClick={handlePlaceBid}
-                style={{
-                  width: '334px',
-                  height: '56px',
-                  background:
-                    'linear-gradient(90deg, #3CBAD9 0%, #4FCFEF 100%)',
-                  borderRadius: '50px',
-                  fontSize: '18px',
-                }}
-              >
+            <Grid container style={{ marginTop: '20px' }} spacing={2} alignItems="center">
+              <Grid item xs={6} lg={6}>
+              <S.PlaceBitButton onClick={handlePlaceBid}>
                 Place a Bid
-              </Button>
+              </S.PlaceBitButton>
+              </Grid>
+              <Grid item xs={6} lg={6}>
               <Link to={`/videos/${id}`}>
-                <Button
-                  size="sm"
-                  style={{
-                    width: '206px',
-                    height: '56px',
-                    background: '#FFFFFF',
-                    border: '2px solid #3CBAD9',
-                    borderRadius: '50px',
-                    color: '#3CBAD9',
-                    fontSize: '18px',
-                  }}
-                >
-                  View Artwork
-                </Button>
+                <S.ViewArtWorkButton>View Artwork</S.ViewArtWorkButton>
               </Link>
+              </Grid>
+             
             </Grid>
           </S.Bid>
         </S.Content>

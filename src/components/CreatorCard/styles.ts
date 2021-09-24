@@ -6,8 +6,11 @@ export const Card = styled(Link)`
   background: #fff;
   border: 1px solid #edf0f4;
   min-height: 436px;
-  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06);
-  border-radius: 30px;
+  background: #ffffff;
+  border: 1px solid #f5f5f5;
+  box-sizing: border-box;
+  box-shadow: 4px 2px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
 `;
 
 export const Bg = styled.div`
@@ -60,12 +63,12 @@ export const Followers = styled.div`
   }
 `;
 export const Number = styled.div`
-font-family: Work Sans;
-font-style: normal;
-font-weight: bold;
-font-size: 16px;
-line-height: 16px;
-color: #1F232B;
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+  color: #1f232b;
 `;
 export const FollowButton = styled.button`
   border: 1px solid #f5f5f5;
@@ -79,10 +82,10 @@ export const FollowButton = styled.button`
   text-align: center;
   color: #3cbad9;
 
-  background: #FFFFFF;
-border: 2px solid #3CBAD9;
-box-sizing: border-box;
-border-radius: 50px;
+  background: #ffffff;
+  border: 2px solid #3cbad9;
+  box-sizing: border-box;
+  border-radius: 50px;
 `;
 export const Name = styled.div`
   font-size: 24px;

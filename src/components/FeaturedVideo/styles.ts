@@ -74,13 +74,12 @@ export const Nickname = styled.div`
   height: 16px;
   font-family: Work Sans;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 16px;
   line-height: 16px;
   color: #1f232b;
-  margin-left: 10px;
   @media (max-width: 768px) {
-    font-size: 16px;
+    font-size: 14px;
   }
 `;
 
@@ -161,4 +160,32 @@ export const BidBtns = styled.div`
 
 export const DivCountdown = styled.div`
   margin-left: 100px;
+`;
+export const PlaceBitButton = styled.button`
+  width: 100%;
+  height: 50px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #3cbad9 0%, #4fcfef 100%);
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  color: #ffffff;
+`;
+export const ViewArtWorkButton = styled.button`
+  width: 100%;
+  height: 50px;
+  background: #ffffff;
+  border: 2px solid #3cbad9;
+  box-sizing: border-box;
+  border-radius: 50px;
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  color: #3cbad9;
 `;

@@ -12,7 +12,7 @@ const CreatorCard = ({ creator }: { creator: Creator }) => {
         <img src="/images/creator.png" alt="" />
       </S.Bg>
       <S.Content>
-        <Avatar size="sm" name={address} isCreatorPage={true} src={profileImgUrl} />
+        <Avatar size="sm" name={address} isCreatorPage={true} src={"/images/hcphotos-Headshots-1 1.png" || profileImgUrl} />
         <S.Name>{name || "Name"}</S.Name>
         <S.Nickname>@{username} </S.Nickname>
         <S.Description>
