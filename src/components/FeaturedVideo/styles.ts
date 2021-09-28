@@ -67,12 +67,15 @@ export const Content = styled.div`
     box-sizing: border-box;
     box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.04);
     border-radius: 50px;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
 `;
 export const Nickname = styled.div`
   width: 112px;
   height: 16px;
-  font-family: Work Sans;
+  font-family: 'Work Sans', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -85,7 +88,7 @@ export const Nickname = styled.div`
 
 export const Title = styled.div`
   margin-bottom: 46px;
-  font-family: Work Sans;
+  font-family: 'Work Sans', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 48px;
@@ -104,7 +107,7 @@ export const Bid = styled.div`
 
 export const BidLabel = styled.div`
   margin-bottom: 15px;
-  font-family: Work Sans;
+  font-family: 'Work Sans', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -125,10 +128,10 @@ export const BidInfo = styled.div`
 `;
 
 export const BidValue = styled.div`
-  font-family: Work Sans;
+  font-family: 'Work Sans', sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 40px;
+  font-size: 35px;
   line-height: 32px;
   color: #1f232b;
   width: 230.5px;
@@ -137,7 +140,7 @@ export const BidValue = styled.div`
 
 export const BidPrice = styled.div`
   margin-top: 15px;
-  font-family: Work Sans;
+  font-family: 'Work Sans', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -166,7 +169,7 @@ export const PlaceBitButton = styled.button`
   height: 50px;
   border-radius: 50px;
   background: linear-gradient(90deg, #3cbad9 0%, #4fcfef 100%);
-  font-family: Work Sans;
+  font-family: 'Work Sans', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -181,7 +184,7 @@ export const ViewArtWorkButton = styled.button`
   border: 2px solid #3cbad9;
   box-sizing: border-box;
   border-radius: 50px;
-  font-family: Work Sans;
+  font-family: 'Work Sans', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 18px;

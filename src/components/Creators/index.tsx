@@ -39,7 +39,7 @@ const Creators = () => {
         </S.Header>
       </Container>
       <Grid container spacing={3}>
-        {map(renderItem, data)}
+        {map(renderItem, data?.slice(0, 8))}
       </Grid>
     </S.FeaturedCreatorsWrapper>
   );

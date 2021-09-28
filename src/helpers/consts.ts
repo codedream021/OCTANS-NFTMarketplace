@@ -12,7 +12,7 @@ export const paramsWithMaxAndMin = (max: number, min: number) => {
     },
     shouldSwiperUpdate: true,
     rebuildOnUpdate: true,
-    spaceBetween: -100,
+    spaceBetween: 15,
     autoplay: {
       delay: 3000,
       disableOnInteraction: false,

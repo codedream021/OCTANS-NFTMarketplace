@@ -8,7 +8,7 @@ export const CountdownItem = styled.div<{ isAuctionCard?: boolean }>`
 `;
 export const CountdownValue = styled.div<{ isAuctionCard?: boolean }>`
   margin-bottom: 20px;
-  font-family: Work Sans;
+  font-family: 'Work Sans', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: ${({ isAuctionCard = false }) =>
@@ -18,7 +18,7 @@ export const CountdownValue = styled.div<{ isAuctionCard?: boolean }>`
   color: #1f232b;
 `;
 export const CountdownLabel = styled.div`
-  font-family: Work Sans;
+  font-family: 'Work Sans', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;

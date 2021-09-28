@@ -13,7 +13,7 @@ export const PlayIcon = styled.img`
 export const BidValue = styled.div`
   width: 110.06px;
   height: 16px;
-  font-family: Work Sans;
+  font-family: 'Work Sans', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -22,9 +22,9 @@ export const BidValue = styled.div`
 `;
 export const BidLabel = styled.div`
   margin-bottom: 6px;
-  width: 93.71px;
+  width: 100%;
   height: 16px;
-  font-family: Work Sans;
+  font-family: 'Work Sans', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -63,7 +63,7 @@ export const Author = styled.div`
 `;
 
 export const Name = styled.div`
-  font-family: Work Sans;
+  font-family: 'Work Sans', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -76,7 +76,7 @@ export const Title = styled.div`
   cursor: pointer;
   transition: color 0.15s ease-in-out;
 
-  font-family: Work Sans;
+  font-family: 'Work Sans', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -103,15 +103,22 @@ export const InfoTitle = styled.div`
   margin-bottom: 20px;
 `;
 
-export const Card = styled.div<{ horizontal?: boolean }>`
+export const Card = styled.div<{ horizontal?: boolean , isProfileCard?:boolean }>`
   display: flex;
   border: 1px solid #f5f5f5;
   box-sizing: border-box;
   box-shadow: 4px 2px 15px rgba(0, 0, 0, 0.05);
   border-radius: 15px;
-  width: 270px;
+  width: 100%;
   height: 467px;
-
+  @media (max-width: 768px) {
+    width: 100% !important;
+    height: 600px;
+  }
+  @media (max-width: 968px) {
+    width: 100% !important;
+  }
+  width: ${props => props.isProfileCard ? '300px' : '100%'};
   flex-direction: ${({ horizontal = false }) =>
     horizontal ? 'row' : 'column'};
   & > div:last-of-type {
@@ -120,17 +127,17 @@ export const Card = styled.div<{ horizontal?: boolean }>`
   }
   ${Thumb} {
     height: ${({ horizontal }) => (horizontal ? 340 : 467)}px;
-    max-width: ${({ horizontal }) => (horizontal ? '605px' : '270px')};
+    max-width: ${({ horizontal }) => (horizontal ? '100%' : '100%')};
   }
 `;
 
 export const AuctionCardStatus = styled.div`
-  width: 249px;
+  width: 90%;
   height: 66px;
   background: #f7f9fb;
   border: 1px solid #f5f5f5;
   box-sizing: border-box;
   border-radius: 10px;
-  margin: 10px;
+  margin: 15px;
   padding: 10px;
 `;

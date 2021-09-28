@@ -46,7 +46,7 @@ const social = [
 ];
 export const ListItem = styled.li`
   list-style: none;
-  font-family: Work Sans;
+  font-family: 'Work Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;

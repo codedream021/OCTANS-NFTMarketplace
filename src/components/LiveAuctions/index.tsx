@@ -17,11 +17,13 @@ const LiveAuctions = ({
   linkText: string;
 }) => {
   const { data } = useLive();
+  console.log(data)
   return (
     <S.LiveAuctionWrapper>
       <Container>
         <S.Header>
           <S.Title>{title}</S.Title>
+          <div>
           <NavLink
             end
             to={'/auctions'}
@@ -30,10 +32,12 @@ const LiveAuctions = ({
           >
             {linkText}
           </NavLink>
+          </div>
         </S.Header>
       </Container>
       {/* <S.List>{map(renderItem, data)}</S.List> */}
 
+    <Container>
       <Swiper {...paramsWithMaxAndMin(4, 1)}>
         {data?.map((asset: Asset) => {
           return (
@@ -43,6 +47,7 @@ const LiveAuctions = ({
           );
         })}
       </Swiper>
+      </Container>
     </S.LiveAuctionWrapper>
   );
 };

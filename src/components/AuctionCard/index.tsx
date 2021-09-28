@@ -8,9 +8,11 @@ import BidCountdown from 'components/BidCountdown';
 
 const AuctionCard = ({
   horizontal = false,
+  isProfileCard,
   asset,
 }: {
   horizontal?: boolean;
+  isProfileCard?: boolean;
   asset: Asset;
 }) => {
   const navigate = useNavigate();
@@ -23,7 +25,7 @@ const AuctionCard = ({
     navigate(`/creators/${ownerId}`);
   };
   return (
-    <S.Card horizontal={horizontal} onClick={handleOpenVideo}>
+    <S.Card horizontal={horizontal} onClick={handleOpenVideo} isProfileCard={isProfileCard}>
       <S.Thumb>
         <S.Poster src={asset.thumbnailUrl} alt={name} />
       </S.Thumb>
@@ -38,7 +40,7 @@ const AuctionCard = ({
           <Grid container>
             <div>
               <S.BidLabel>Current Bid</S.BidLabel>
-              <S.BidValue>0.1666 ETH</S.BidValue>
+              <S.BidValue>0.1666 OCTA </S.BidValue>
             </div>
             <div>
               <S.BidLabel>Auction ends in</S.BidLabel>

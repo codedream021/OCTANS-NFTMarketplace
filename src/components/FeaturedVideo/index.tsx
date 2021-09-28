@@ -46,7 +46,7 @@ const FeaturedVideo = ({ asset }: { asset: Asset }) => {
             <Grid container>
               <div>
                 <S.BidLabel>Current Bid</S.BidLabel>
-                <S.BidValue>0.1666 ETH</S.BidValue>
+                <S.BidValue>0.1666 OCTA</S.BidValue>
                 <S.BidPrice>$568.75</S.BidPrice>
               </div>
               <S.DivCountdown>

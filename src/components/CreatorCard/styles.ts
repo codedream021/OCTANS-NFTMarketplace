@@ -52,7 +52,7 @@ export const Followers = styled.div`
   padding: 30px 0;
   align-items: flex-start;
   span {
-    font-family: Work Sans;
+    font-family: 'Work Sans', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -63,7 +63,7 @@ export const Followers = styled.div`
   }
 `;
 export const Number = styled.div`
-  font-family: Work Sans;
+  font-family: 'Work Sans', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -74,7 +74,7 @@ export const FollowButton = styled.button`
   border: 1px solid #f5f5f5;
   border-radius: 30px;
   padding: 10px 20px;
-  font-family: Work Sans;
+  font-family: 'Work Sans', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -99,7 +99,7 @@ export const Name = styled.div`
 `;
 
 export const Nickname = styled.div`
-  font-family: Work Sans;
+  font-family: 'Work Sans', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -114,7 +114,7 @@ export const Nickname = styled.div`
   }
 `;
 export const Description = styled.div`
-  font-family: Work Sans;
+  font-family: 'Work Sans', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;

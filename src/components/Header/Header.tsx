@@ -109,6 +109,7 @@ const Header: React.FC<Props> = ({
             maxHeight: '70px',
             maxWidth: '210px',
             verticalAlign: 'middle',
+            height: "17px",
           }}
           src={logo}
           srcSet={`${logo2x} 2x`}

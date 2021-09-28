@@ -29,16 +29,24 @@ export const BannerSectionWrapper = styled.div`
       width: 470px;
       margin-left: 215px;
       @media (max-width: 768px) {
-        margin-left: 0;
+        margin-left: 50px;
+        padding: 10px;
+        max-width: unset;
+        width: unset;
       }
       margin-top: 140px;
       & .crsl__hd {
         max-width: 100%;
-        font-family: Work Sans;
+        font-family: 'Work Sans', sans-serif;
         font-style: normal;
         font-weight: bold;
         font-size: 48px;
         line-height: 54px;
+        @media (max-width: 768px) {
+          font-size: 32px;
+          line-height: 40px;
+          wrap-text: break-word;
+        }
       }
     }
     & .crsl--para {
@@ -46,7 +54,7 @@ export const BannerSectionWrapper = styled.div`
       font-weight: 400;
       margin-top: 10px;
       margin-bottom: 0px;
-      font-family: Work Sans;
+      font-family: 'Work Sans', sans-serif;
       font-style: normal;
       font-weight: 500;
       font-size: 16px;

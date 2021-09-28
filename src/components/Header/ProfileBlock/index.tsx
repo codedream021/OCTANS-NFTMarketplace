@@ -90,7 +90,6 @@ const ProfileBlock = () => {
     const { token } = await authApi.auth(account, signature);
     localStorage.setItem('token', token);
     localStorage.setItem('account', account);
-    console.log({ token });
     setTokenHeader(token);
     updateOpenSea();
     refetch();
@@ -154,7 +153,7 @@ const ProfileBlock = () => {
           <div>Not installed</div>
         ) : (
           <Button
-            size={'sm'}
+            size={'xs'}
             theme={'gradient'}
             onClick={connectWallet}
             style={{ textTransform: 'uppercase' }}

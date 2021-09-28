@@ -5,7 +5,6 @@ import { store } from 'App';
 
 const baseURL = process.env.REACT_APP_BASE_URL;
 const token = localStorage.getItem('token');
-console.log({ token });
 const defaultTransformers = (
   transformRequest?: AxiosTransformer | AxiosTransformer[]
 ): AxiosTransformer[] => {

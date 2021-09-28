@@ -20,15 +20,13 @@ export const Header = styled.div`
   align-items: center;
   justify-content: space-between;
   padding-bottom: 20px;
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
+
 `;
 export const Title = styled.div`
   display: flex;
   align-items: center;
 
-  font-family: Work Sans;
+  font-family: 'Work Sans', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 32px;
@@ -43,7 +41,7 @@ export const Title = styled.div`
 `;
 
 export const LiveAuctionWrapper = styled.div`
-  max-width: 85%;
+  max-width: 90%;
   margin: 0px auto;
   margin-bottom: 100px;
   background: #fff;

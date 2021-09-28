@@ -23,7 +23,7 @@ export const SearchBar = styled.div<{ focus: boolean }>`
     font-weight: normal;
     font-style: normal;
     line-height: 28px;
-    font-family: Work Sans;
+    font-family: 'Work Sans', sans-serif;
     @media (max-width: 768px) {
       font-size: 20px;
       height: 60px;

@@ -11,8 +11,6 @@ const routes = {
 const accountApi = {
   async fetchAccount() {
     const { data } = await api.get<Account>(routes.basePath);
-    console.log("hi");
-    console.log({data});
     return data;
   },
   async updateAccount(

@@ -2,16 +2,13 @@ import React from 'react';
 import * as S from './styles';
 import Button from 'components/UI/Button';
 import Swiper from 'react-id-swiper';
-import { paramsWithMaxAndMin } from 'helpers/consts';
 
 const params = {
   slidesPerView: 1,
   loop: true,
-  speed: 2500,
-  observer: true,
-  observeParents: true,
-  shouldSwiperUpdate: true,
-  rebuildOnUpdate: true,
+  speed: 3500,
+  spaceBetween: 500,
+
   pagination: {
     el: '.swiper-pagination',
     type: 'bullets',
@@ -20,6 +17,23 @@ const params = {
   autoplay: {
     delay: 3000,
     disableOnInteraction: false,
+  },
+  breakpoints: {
+    1024: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 1,
+    },
+    640: {
+      slidesPerView: 1,
+    },
+    320: {
+      slidesPerView: 1,
+    },
+    220: {
+      slidesPerView: 1,
+    },
   },
 };
 const headers = [

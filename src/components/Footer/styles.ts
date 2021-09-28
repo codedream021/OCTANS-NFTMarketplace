@@ -94,7 +94,7 @@ border-radius: 0px 5px 5px 0px;
   background: transparent;
   padding: 10px;
   font-size: 14px;
-  font-family: Work Sans;
+  font-family: 'Work Sans', sans-serif;
 font-style: normal;
 font-weight: normal;
 font-size: 16px;
