@@ -109,7 +109,6 @@ export const Card = styled.div<{ horizontal?: boolean , isProfileCard?:boolean }
   box-sizing: border-box;
   box-shadow: 4px 2px 15px rgba(0, 0, 0, 0.05);
   border-radius: 15px;
-  width: 100%;
   height: 467px;
   @media (max-width: 768px) {
     width: 100% !important;
@@ -118,7 +117,7 @@ export const Card = styled.div<{ horizontal?: boolean , isProfileCard?:boolean }
   @media (max-width: 968px) {
     width: 100% !important;
   }
-  width: ${props => props.isProfileCard ? '300px' : '100%'};
+  width: ${props => props.isProfileCard ? '270px' : '100%'};
   flex-direction: ${({ horizontal = false }) =>
     horizontal ? 'row' : 'column'};
   & > div:last-of-type {
