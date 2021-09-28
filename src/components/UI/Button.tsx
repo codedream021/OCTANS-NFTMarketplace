@@ -2,13 +2,18 @@ import React, { ButtonHTMLAttributes } from 'react';
 import styled from 'styled-components';
 import { css } from 'styled-components';
 
-type Size = 'sm' | 'md' | 'lg';
+type Size = 'xs'| 'sm' | 'md' | 'lg';
 type Theme = 'primary' | 'secondary' | 'gradient';
 
 const sm = css`
   height: 48px;
   width: 180px;
   font-size: 16px;
+`;
+const xs = css`
+  height: 48px;
+  width: 150px;
+  font-size: 14px;
 `;
 
 const md = css`
@@ -67,6 +72,7 @@ const gradient = css`
 `;
 
 const sizes: Record<Size, any> = {
+  xs,
   sm,
   md,
   lg,
@@ -79,16 +85,16 @@ const themes: Record<Theme, any> = {
 };
 
 const ButtonBase = styled.button<{ size: Size; btnTheme: Theme }>`
-  font-family: Work Sans;
+  font-family: 'Work Sans', sans-serif;
   font-weight: 600;
   font-style: normal;
   border-width: 0px;
   border-style: solid;
   border-radius: 25px;
+  padding: 0px;
   ${({ size }) => sizes[size]};
   ${({ btnTheme }) => themes[btnTheme]};
   white-space: nowrap;
-  text-transform: uppercase;
   transition: all 0.2s;
   box-shadow: inset 0 1px 0 #fff, 0 2px 0 rgb(0 0 0 / 22%),
     1px 4px 4px 2px rgb(00 0 / 30%);
@@ -102,7 +108,6 @@ const ButtonBase = styled.button<{ size: Size; btnTheme: Theme }>`
   zoom: 1;
   border: 1px solid transparent;
   text-align: center;
-  text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.2s;

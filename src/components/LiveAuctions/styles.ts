@@ -19,33 +19,33 @@ export const Header = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin:15px;
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
+  padding-bottom: 20px;
+
 `;
 export const Title = styled.div`
   display: flex;
-  font-size: 33px;
-  font-weight: bold;
   align-items: center;
-  color: #fff;
-  margin:15px;
+
+  font-family: 'Work Sans', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 32px;
+  color: #1f232b;
+  width: 470px;
+  height: 32px;
+
   @media (max-width: 768px) {
     font-size: 18px;
   }
-  &::before {
-    content: '';
-    background: linear-gradient(
-      270deg,
-      #7549d4 0%,
-      #e2486a 35.94%,
-      #ed6858 69.79%,
-      #f09051 100%
-    );
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    margin-right: 15px;
+`;
+
+export const LiveAuctionWrapper = styled.div`
+  max-width: 90%;
+  margin: 0px auto;
+  margin-bottom: 100px;
+  background: #fff;
+  & > .swiper-container {
+    padding-bottom: 20px;
   }
 `;

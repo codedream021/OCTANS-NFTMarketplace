@@ -2,18 +2,14 @@ import React from 'react';
 import * as S from './styles';
 import View from 'components/UI/View';
 import Avatar from 'components/Avatar';
-import { ReactComponent as ShareIcon } from 'icons/share.svg';
 import BidCountdown from 'components/BidCountdown';
 import Button from 'components/UI/Button';
 import { Asset } from 'types/asset';
-import playIcon from 'icons/play.png';
-import IconButton from 'components/UI/IconButton';
 import { Link } from 'react-router-dom';
 import { useStore } from 'store';
 import { useWeb3React } from '@web3-react/core';
 import { Grid } from '@material-ui/core';
-import OctansLogoSale from 'components/OctansLogoSale';
-
+import nft from './assets/nft_1.png';
 
 const FeaturedVideo = ({ asset }: { asset: Asset }) => {
   const { account } = useWeb3React();
@@ -29,63 +25,47 @@ const FeaturedVideo = ({ asset }: { asset: Asset }) => {
   };
   return (
     <Grid container>
-      <Grid item xs={12} md={6} >
+      <Grid item xs={12} md={6}>
         <S.Video>
-          <video src={asset.previewUrl} poster={asset.thumbnailUrl} />
-          <S.FeaturedBadge>Featured NFT</S.FeaturedBadge>
-          <S.PlayBtn>
-            <img src={playIcon} alt="Play" />
-          </S.PlayBtn>
+          <img src={nft} alt="NFT" />
         </S.Video>
       </Grid>
 
       <Grid item xs={12} md={6}>
         <S.Content>
-          <View row centerV marginB={46}>
+          <View row centerV marginB={46} className="content__border">
             <Avatar
-              src={
-                'https://bafkreiecuo4clslx2zzd2mntfp7e5uppenaff4ksw54ss5kow6z4ujsfvq.ipfs.dweb.link'
-              }
+              src={'/images/hcphotos-Headshots-1 1.png'}
               size="sm"
               name={owner.address}
             />
             <S.Nickname>@{owner.user.username}</S.Nickname>
-            <IconButton>
-              <ShareIcon />
-            </IconButton>
           </View>
           <S.Title>{name}</S.Title>
           <S.Bid>
-            <Grid container spacing={2}>
+            <Grid container>
               <div>
                 <S.BidLabel>Current Bid</S.BidLabel>
-                <S.BidValue>123123123123<OctansLogoSale/></S.BidValue>
-                <S.BidPrice>($10,021.77)</S.BidPrice>
+                <S.BidValue>0.1666 OCTA</S.BidValue>
+                <S.BidPrice>$568.75</S.BidPrice>
               </div>
               <S.DivCountdown>
                 <S.BidLabel>Auction ending in</S.BidLabel>
                 <BidCountdown />
               </S.DivCountdown>
             </Grid>
-            <Grid
-              container
-              spacing={5}
-              justify="space-around"
-              style={{ marginTop: '40px' }}
-              alignItems="center"
-            >
-              <Button
-                size="lg"
-                onClick={handlePlaceBid}
-                style={{ margin: '15px' }}
-              >
-                Place a bid
-              </Button>
-              <Link to={`/videos/${id}`} style={{ margin: '15px' }}>
-                <Button size="lg" theme="secondary">
-                  View Asset
-                </Button>
+            <Grid container style={{ marginTop: '20px' }} spacing={2} alignItems="center">
+              <Grid item xs={6} lg={6}>
+              <S.PlaceBitButton onClick={handlePlaceBid}>
+                Place a Bid
+              </S.PlaceBitButton>
+              </Grid>
+              <Grid item xs={6} lg={6}>
+              <Link to={`/videos/${id}`}>
+                <S.ViewArtWorkButton>View Artwork</S.ViewArtWorkButton>
               </Link>
+              </Grid>
+             
             </Grid>
           </S.Bid>
         </S.Content>

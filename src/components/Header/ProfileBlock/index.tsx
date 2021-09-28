@@ -90,7 +90,6 @@ const ProfileBlock = () => {
     const { token } = await authApi.auth(account, signature);
     localStorage.setItem('token', token);
     localStorage.setItem('account', account);
-    console.log({ token });
     setTokenHeader(token);
     updateOpenSea();
     refetch();
@@ -121,18 +120,6 @@ const ProfileBlock = () => {
   const formattedEthBalance = toFixedNoRound(formatEther(ethBalance), 2);
 
   const renderMetaMaskData = () => {
-    console.log({ isMetamaskInstalled });
-    console.log({ isFetchedAfterMount });
-    if (isFetching && !isFetchedAfterMount) {
-      return (
-        <div>
-          <Spinner size="sm" />
-        </div>
-      );
-    }
-    if (!isMetamaskInstalled) {
-      return <div>Not installed</div>;
-    }
     if (account && profile) {
       const data: {
         balance: string;
@@ -159,9 +146,22 @@ const ProfileBlock = () => {
       );
     }
     return (
-      <Button size={'sm'} theme={'gradient'} onClick={connectWallet}>
-        Connect Wallet
-      </Button>
+      <S.ConnectBtnDiv>
+        {isFetching && !isFetchedAfterMount ? (
+          <Spinner size="sm" />
+        ) : !isMetamaskInstalled ? (
+          <div>Not installed</div>
+        ) : (
+          <Button
+            size={'xs'}
+            theme={'gradient'}
+            onClick={connectWallet}
+            style={{ textTransform: 'uppercase' }}
+          >
+            Connect Wallet
+          </Button>
+        )}
+      </S.ConnectBtnDiv>
     );
   };
   return renderMetaMaskData();

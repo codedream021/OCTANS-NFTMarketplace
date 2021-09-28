@@ -1,5 +1,30 @@
 import styled from 'styled-components';
 
+export const Header = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+
+`;
+export const Title = styled.div`
+  display: flex;
+  align-items: center;
+
+  font-family: 'Work Sans', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 32px;
+  color: #1f232b;
+  width: 470px;
+  height: 32px;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+`;
+
 export const List = styled.div`
   padding: 30px 20px;
   display: flex;
@@ -35,10 +60,9 @@ export const Subttl = styled.div`
   margin-bottom: 30px;
 `;
 
-export const Title = styled.div`
-  font-size: 33px;
-  line-height: 40px;
-  font-weight: bold;
-  color: #fff;
-  margin-bottom: auto;
+export const FeaturedCreatorsWrapper = styled.div`
+  max-width: 90%;
+  margin: 0px auto;
+  margin-bottom: 100px;
+  background: #fff;
 `;

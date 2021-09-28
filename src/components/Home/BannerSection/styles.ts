@@ -8,14 +8,14 @@ export const BannerSectionWrapper = styled.div`
   width: 100%;
   height: 500px;
   background: url(${Giveaway_Header});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   & .crsl--content {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border-radius: 40px;
-    overflow: hidden;
+    @media (min-width: 768px) {
+      width: 70%;
+    }
+    height: 100%;
     background: linear-gradient(
       90deg,
       rgba(12, 12, 10, 0.9) 0%,
@@ -23,21 +23,30 @@ export const BannerSectionWrapper = styled.div`
       rgba(12, 12, 10, 0) 100%
     );
 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+   
     & .crsl--text {
       max-width: 470px;
       width: 470px;
       margin-left: 215px;
+      @media (max-width: 768px) {
+        margin-left: 50px;
+        padding: 10px;
+        max-width: unset;
+        width: unset;
+      }
       margin-top: 140px;
       & .crsl__hd {
         max-width: 100%;
-        font-family: Work Sans;
+        font-family: 'Work Sans', sans-serif;
         font-style: normal;
         font-weight: bold;
         font-size: 48px;
         line-height: 54px;
+        @media (max-width: 768px) {
+          font-size: 32px;
+          line-height: 40px;
+          wrap-text: break-word;
+        }
       }
     }
     & .crsl--para {
@@ -45,7 +54,7 @@ export const BannerSectionWrapper = styled.div`
       font-weight: 400;
       margin-top: 10px;
       margin-bottom: 0px;
-      font-family: Work Sans;
+      font-family: 'Work Sans', sans-serif;
       font-style: normal;
       font-weight: 500;
       font-size: 16px;

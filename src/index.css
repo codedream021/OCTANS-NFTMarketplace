@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100&display=swap');
 html,
 body {
@@ -7,9 +8,8 @@ body {
 body {
   margin: 0;
   color: #fff;
-    font-family: 'IBM Plex Mono', monospace,-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Work Sans', sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -22,4 +22,59 @@ code {
 @font-face {
   font-family: 'SpaceAge';
   src: local('SpaceAge'), url("./extrafonts/spaceage.ttf") format('truetype');
+}
+
+.crsl--content .swiper-pagination{
+  text-align: left;
+  margin-left: 200px;
+
+}
+@media screen and (max-width: 367px) {
+  .crsl--content .swiper-pagination{
+    margin-top: 20.57px;
+    margin-left: 100px;
+
+  }
+}
+.swiper-pagination {
+  margin-top: 48.57px;
+  position: unset !important;
+}
+
+.swiper-pagination-bullet {
+  padding: 2px;
+  background: #E7F0F9 !important;
+  width: 16px !important;
+  opacity: 1 !important;
+  height: 16px!important;
+  vertical-align: middle;
+  box-shadow: 4px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.crsl--content .swiper-pagination-bullet {
+  border: 2px solid #FFFFFF!important;
+  box-sizing: border-box!important;
+  border-radius: 15px!important;
+  width: 20px !important;
+  background: transparent!important;
+  height: 20px!important;
+  vertical-align: middle;
+  opacity: 1 !important;
+}
+
+.crsl--content .swiper-pagination-bullet-active {
+  width: 20px!important;
+  height: 20px!important;
+  background: linear-gradient(90deg, #3CBAD9 0%, #4FCFEF 100%) !important;
+  border-radius: 50px !important;
+  opacity: 1 !important;
+
+}
+.swiper-pagination-bullet-active {
+  width: 12px!important;
+  height: 14px!important;
+  padding: 5px;
+  box-shadow: 4px 2px 15px rgba(0, 0, 0, 0.1);
+  border: 10px solid #ffffff !important;
+  background: linear-gradient(90deg, #3CBAD9 0%, #4FCFEF 100%) !important;
 }

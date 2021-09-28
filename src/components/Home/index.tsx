@@ -8,6 +8,7 @@ import Creators from '../Creators';
 import FeaturedVideo from 'components/FeaturedVideo';
 import { useFeatured } from 'api/spotlight';
 import BannerSection from './BannerSection';
+import CreativeEconomy from 'components/CreativeEconomy';
 
 const Home = () => {
   const { data } = useFeatured();
@@ -16,28 +17,20 @@ const Home = () => {
     <div>
       <BannerSection />
       <Head>
-        <Title>
-          Welcome to &nbsp;
-          <span>Octans</span> NFTs.
-        </Title>
         <FeaturedVideo asset={data[0]} />
       </Head>
-      <Subscribe />
-      <LiveAuctions />
-      <FeaturedVideos
-        name="Collection A"
-        description="Sample Description for Collection A"
+      <LiveAuctions
+        title={'Trending Auctions'}
+        linkText={'View all Auctions'}
       />
-      <FeaturedVideos
-        name="Collection B"
-        description="Sample Description for Collection B"
+      <LiveAuctions
+        title={'Featured Artworks'}
+        linkText={'View all Artworks'}
       />
-      <FeaturedVideos
-        name="Collection C"
-        description="Sample Description for Collection C"
-      />
+
       <Creators />
-      <BecomeCreator />
+      {/* <BecomeCreator /> */}
+      <CreativeEconomy/>
     </div>
   );
 };

@@ -26,15 +26,15 @@ export const NavBar = styled.div`
   left: 75%;
   transform: translateX(-75%);
   a {
-    font-family: Work Sans;
+    font-family: 'Work Sans', sans-serif;
     font-style: normal;
     font-weight: normal;
+    font-size: 16px;
     line-height: 28px;
     height: 26px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
     padding: 5px;
     min-width: 48px;
     border-radius: 12px;

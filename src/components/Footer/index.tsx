@@ -3,45 +3,56 @@ import { map } from 'lodash/fp';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import * as S from './styles';
-import logo from './logo.png';
+import logoWhite from '../Header/assets/w_logo.png';
+import logo2xWhite from '../Header/assets/w_logo@2x.png';
 import View from '../UI/View';
 import styled from 'styled-components';
-
+import Social from 'components/VideoDetailsPage/Social';
+import { ReactComponent as Facebook } from '../Header/assets/facebook.svg';
+import { ReactComponent as Twitter } from '../Header/assets/twitter.svg';
+import { ReactComponent as Linkedin } from '../Header/assets/linkedin.svg';
+import { ReactComponent as Mail } from '../Header/assets/mail.svg';
 const menu = [
   {
-    path: '/',
-    name: 'Home',
+    path: '/explore',
+    name: 'Explore',
   },
   {
-    path: '/videos',
-    name: 'Browse',
-  },
-    {
-    path: '/collections',
-    name: 'Collections',
+    path: '/blog',
+    name: 'Blog',
   },
   {
-    path: '/creators',
-    name: 'Creators',
+    path: '/about',
+    name: 'About',
   },
 ];
 
-const menu2 = [
+const social = [
   {
-    path: '/terms',
-    name: 'Terms of Service',
+    name: 'instagram',
+    link: '',
+    icon: <Facebook />,
   },
   {
-    path: '/privacy',
-    name: 'Privacy',
+    name: 'youtube',
+    link: '',
+    icon: <Twitter />,
   },
   {
-    path: '/help',
-    name: 'Help',
+    name: 'share',
+    link: '',
+    icon: <Linkedin />,
   },
 ];
 export const ListItem = styled.li`
   list-style: none;
+  font-family: 'Work Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  color: #ffffff;
+  margin-bottom: 20px;
   &:hover {
     color: #ffc107;
   }
@@ -51,6 +62,13 @@ export const ListItem = styled.li`
 `;
 
 const Footer = () => {
+  const renderSocial = ({ name, link, icon }: any) => {
+    return (
+      <S.SocialItem key={name} href={link}>
+        {icon}
+      </S.SocialItem>
+    );
+  };
   const renderLink = ({ path, name }: { path: string; name: string }) => {
     return (
       <ListItem key={path}>
@@ -64,22 +82,39 @@ const Footer = () => {
         <S.Inner>
           <div>
             <View marginB={50}>
-              <img src={logo} width={80} height={80} alt="Octans NFT" />
+              <img
+                style={{
+                  maxHeight: '70px',
+                  maxWidth: '210px',
+                  verticalAlign: 'middle',
+                }}
+                src={logoWhite}
+                srcSet={`${logo2xWhite} 2x`}
+                alt="Octa NFT"
+              />
             </View>
+            <View row>{social.map(renderSocial)}</View>
             <S.Copyright>
-              © 2021, OctansNFT. <br />
-              All Right Reserved
+              ©2021 Octa. All rights reserved.
+              <br />
+              Terms - Privacy - Security
             </S.Copyright>
           </div>
-          <div>
-            <S.Title>
-              Thank you for your interests in Octans NFT
-            </S.Title>
-            <S.Menu>
+          <S.NewsletterWrapper>
+            <div>
+              <S.CategoryTitle>Company</S.CategoryTitle>
               <ul>{map(renderLink, menu)}</ul>
-              <ul>{map(renderLink, menu2)}</ul>
-            </S.Menu>
-          </div>
+            </div>
+            <div>
+              <S.CategoryTitle>Newsletter</S.CategoryTitle>
+              <S.Newsletter>
+                <input type="text" placeholder="name@dmain.com" />
+                <span>
+                  <Mail />
+                </span>
+              </S.Newsletter>
+            </div>
+          </S.NewsletterWrapper>
         </S.Inner>
       </Container>
     </S.Footer>

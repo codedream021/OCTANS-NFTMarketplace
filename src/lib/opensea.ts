@@ -137,13 +137,13 @@ function subscribeSeaportEvents(openSeaPort: OpenSeaPort) {
   openSeaPort.addListener(
     EventType.CreateOrder,
     ({ order, accountAddress }) => {
-      console.log('create order', { order, accountAddress });
+      // console.log('create order', { order, accountAddress });
     }
   );
   openSeaPort.addListener(
     EventType.OrderDenied,
     ({ order, accountAddress }) => {
-      console.log('order denied', { order, accountAddress });
+      // console.log('order denied', { order, accountAddress });
     }
   );
   openSeaPort.addListener(

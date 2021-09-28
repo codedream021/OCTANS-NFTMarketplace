@@ -11,17 +11,26 @@ export const PlayIcon = styled.img`
   height: 80px;
 `;
 export const BidValue = styled.div`
-  font-size: 40px;
+  width: 110.06px;
+  height: 16px;
+  font-family: 'Work Sans', sans-serif;
+  font-style: normal;
   font-weight: bold;
-  color: #fff;
+  font-size: 16px;
+  line-height: 16px;
+  color: #1f232b;
 `;
 export const BidLabel = styled.div`
-  font-size: 20px;
+  margin-bottom: 6px;
+  width: 100%;
+  height: 16px;
+  font-family: 'Work Sans', sans-serif;
+  font-style: normal;
   font-weight: 500;
-  margin-bottom: 20px;
-  color: #fff;
+  font-size: 14px;
+  line-height: 14px;
+  color: #656772;
 `;
-
 
 export const BidPrice = styled.div`
   font-size: 22px;
@@ -30,24 +39,16 @@ export const BidPrice = styled.div`
 `;
 
 export const Thumb = styled.div`
-  border-radius: 20px;
   overflow: hidden;
   position: relative;
   cursor: pointer;
-  height: 258px;
-  &:hover {
-    img:last-child {
-      transform: translate(-50%, -50%) scale(1.1);
-    }
-  }
-  background: #000;
 `;
 
 export const Poster = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: contain;
   display: inline-block;
+  border-radius: 15px 15px 0px 0px;
 `;
 
 export const Author = styled.div`
@@ -62,22 +63,26 @@ export const Author = styled.div`
 `;
 
 export const Name = styled.div`
-  font-size: 24px;
-  font-weight: 700;
-  color:#fff;
-  margin-left: 19px;
+  font-family: 'Work Sans', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  color: #1f232b;
 `;
 
 export const Title = styled.div`
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 30px;
-  color:#fff;
+  margin: 10px;
   cursor: pointer;
   transition: color 0.15s ease-in-out;
-  &:hover {
-    color: #7f4acb;
-  }
+
+  font-family: 'Work Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 20px;
+
+  color: #1f232b;
 `;
 
 export const Info = styled.div`
@@ -98,27 +103,41 @@ export const InfoTitle = styled.div`
   margin-bottom: 20px;
 `;
 
-export const Card = styled.div<{ horizontal?: boolean }>`
-  background: #15181D;
-  border:1px solid rgb(61, 187, 216); 
-  box-sizing: border-box;
-  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06);
-  -webkit-box-shadow:-1px 1px 15px 2px rgb(0 169 204 / 40%) ; 
-  box-shadow:-1px 1px 15px 2px rgb(0 169 204 / 40%);
-   border-radius: 12px;
-  padding: 40px;
+export const Card = styled.div<{ horizontal?: boolean , isProfileCard?:boolean }>`
   display: flex;
+  border: 1px solid #f5f5f5;
+  box-sizing: border-box;
+  box-shadow: 4px 2px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+  width: 100%;
+  height: 467px;
+  @media (max-width: 768px) {
+    width: 100% !important;
+    height: 600px;
+  }
+  @media (max-width: 968px) {
+    width: 100% !important;
+  }
+  width: ${props => props.isProfileCard ? '300px' : '100%'};
   flex-direction: ${({ horizontal = false }) =>
     horizontal ? 'row' : 'column'};
-  & > div:first-of-type {
-    margin-bottom: ${({ horizontal = false }) => (horizontal ? 0 : 30)}px;
-  }
   & > div:last-of-type {
     flex: 1;
     margin-left: ${({ horizontal = false }) => (horizontal ? 40 : 0)}px;
   }
   ${Thumb} {
-    height: ${({ horizontal }) => (horizontal ? 340 : 258)}px;
-    max-width: ${({ horizontal }) => (horizontal ? '605px' : '100%')};
+    height: ${({ horizontal }) => (horizontal ? 340 : 467)}px;
+    max-width: ${({ horizontal }) => (horizontal ? '100%' : '100%')};
   }
+`;
+
+export const AuctionCardStatus = styled.div`
+  width: 90%;
+  height: 66px;
+  background: #f7f9fb;
+  border: 1px solid #f5f5f5;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin: 15px;
+  padding: 10px;
 `;

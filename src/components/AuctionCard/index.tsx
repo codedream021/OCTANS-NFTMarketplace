@@ -1,17 +1,18 @@
 import React, { SyntheticEvent } from 'react';
 import * as S from './styles';
 import Avatar from '../Avatar';
-import playIcon from 'icons/play.png';
 import { useNavigate } from 'react-router-dom';
 import { Asset } from 'types/asset';
-import OctansLogoSale from 'components/OctansLogoSale';
 import { Grid } from '@material-ui/core';
+import BidCountdown from 'components/BidCountdown';
 
 const AuctionCard = ({
   horizontal = false,
+  isProfileCard,
   asset,
 }: {
   horizontal?: boolean;
+  isProfileCard?: boolean;
   asset: Asset;
 }) => {
   const navigate = useNavigate();
@@ -24,26 +25,29 @@ const AuctionCard = ({
     navigate(`/creators/${ownerId}`);
   };
   return (
-    <S.Card horizontal={horizontal} onClick={handleOpenVideo}>
+    <S.Card horizontal={horizontal} onClick={handleOpenVideo} isProfileCard={isProfileCard}>
       <S.Thumb>
         <S.Poster src={asset.thumbnailUrl} alt={name} />
-        <S.PlayIcon src={playIcon} alt="Play" />
       </S.Thumb>
       <div>
+        <S.Title>{name}</S.Title>
+
         <S.Author onClick={handleOpenProfile}>
           <Avatar src={profileImgUrl} name={address} />
           <S.Name>@{username}</S.Name>
         </S.Author>
-        <S.Title>{name}</S.Title>
-        <Grid spacing={2}>
-          <div>
-            <S.BidLabel>Current Bid</S.BidLabel>
-            <S.BidValue>
-              123123123123<OctansLogoSale/>
-            </S.BidValue>
-            <S.BidPrice>($10,021.77)</S.BidPrice>
-          </div>
-        </Grid>
+        <S.AuctionCardStatus>
+          <Grid container>
+            <div>
+              <S.BidLabel>Current Bid</S.BidLabel>
+              <S.BidValue>0.1666 OCTA </S.BidValue>
+            </div>
+            <div>
+              <S.BidLabel>Auction ends in</S.BidLabel>
+              <BidCountdown isAuctionCard={true} />
+            </div>
+          </Grid>
+        </S.AuctionCardStatus>
       </div>
     </S.Card>
   );

@@ -11,6 +11,7 @@ import { ToastContainer } from 'react-toastify';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import CreatorsPage from 'components/CreatorsPage';
 import CreatorPage from 'components/CreatorPage';
+import NewCreatorPage from 'components/NewCreatorPage';
 import VideoArtsPage from 'components/VideoArtsPage';
 import { useWeb3React } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
@@ -61,7 +62,7 @@ function App() {
             <Route path={routes.videos} element={<VideoArtsPage />} />
             <Route path={routes.video} element={<VideoDetailsPage />} />
             <Route path={routes.creators} element={<CreatorsPage />} />
-            <Route path={routes.creator} element={<CreatorPage />} />
+            <Route path={routes.creator} element={<NewCreatorPage />} />
             <Route path={routes.upload} element={<UploadPage />} />
             <Route path={routes.uploadSingle} element={<UploadSingleItem />} />
             <Route path={routes.profile} element={<ProfilePage />} />

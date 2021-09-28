@@ -7,18 +7,18 @@ export const Root = styled.div`
 `;
 
 export const Video = styled.div`
-  max-width: 900px;
+  max-width: 470px;
   flex: 2;
-  width: 90%;
+  width: 470px;
   margin-right: 40px;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06);
   border-radius: 20px;
   position: relative;
   margin: auto;
   @media (min-width: 768px) {
-    height: 642.444px;
+    height: 440px;
   }
-  video {
+  img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -52,36 +52,50 @@ export const PlayBtn = styled.div`
 `;
 export const Content = styled.div`
   width: 90%;
-  color: #fff;
-  margin: auto;
-  box-shadow: 0px 0px 35px 0px rgba(60, 186, 217, 0.75);
-  -webkit-box-shadow: 0px 0px 35px 0px rgba(60, 186, 217, 0.75);
-  -moz-box-shadow: 0px 0px 35px 0px rgba(60, 186, 217, 0.75);
-  background: #20252d;
-  padding: 40px 40px 20px;
-  border-radius: 30px;
+  padding: 20px;
   @media (max-width: 768px) {
     margin-top: 20px;
   }
   @media (min-width: 768px) {
-    height: 642.444px;
+    height: 440px;
+  }
+
+  & .content__border {
+    width: 35%;
+    background: #ffffff;
+    border: 1px solid #f5f5f5;
+    box-sizing: border-box;
+    box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 50px;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
 `;
 export const Nickname = styled.div`
-  font-size: 24px;
-  font-weight: 700;
-  margin-left: 20px;
+  width: 112px;
+  height: 16px;
+  font-family: 'Work Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  color: #1f232b;
   @media (max-width: 768px) {
-    font-size: 16px;
+    font-size: 14px;
   }
 `;
 
 export const Title = styled.div`
-  font-size: 66px;
-  font-weight: 700;
   margin-bottom: 46px;
+  font-family: 'Work Sans', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 40px;
+  color: #1f232b;
   @media (max-width: 768px) {
-    font-size: 40px;
+    font-size: 48px;
   }
 `;
 
@@ -92,10 +106,15 @@ export const Bid = styled.div`
 `;
 
 export const BidLabel = styled.div`
-  font-size: 20px;
+  margin-bottom: 15px;
+  font-family: 'Work Sans', sans-serif;
+  font-style: normal;
   font-weight: 500;
-  margin-bottom: 20px;
-  color: #41bedb;
+  font-size: 16px;
+  line-height: 24px;
+  color: #656772;
+  width: 147.58px;
+  height: 24px;
 `;
 
 export const BidInfo = styled.div`
@@ -109,14 +128,26 @@ export const BidInfo = styled.div`
 `;
 
 export const BidValue = styled.div`
-  font-size: 40px;
-  font-weight: bold;
+  font-family: 'Work Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 32px;
+  color: #1f232b;
+  width: 230.5px;
+  height: 32px;
 `;
 
 export const BidPrice = styled.div`
-  font-size: 22px;
-  color: #41bedb;
-  margin-top: 20px;
+  margin-top: 15px;
+  font-family: 'Work Sans', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1f232b;
+  width: 147.58px;
+  height: 24px;
 `;
 
 export const BidBtns = styled.div`
@@ -131,5 +162,33 @@ export const BidBtns = styled.div`
 `;
 
 export const DivCountdown = styled.div`
-  margin-left:25%;
+  margin-left: 100px;
+`;
+export const PlaceBitButton = styled.button`
+  width: 100%;
+  height: 50px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #3cbad9 0%, #4fcfef 100%);
+  font-family: 'Work Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  color: #ffffff;
+`;
+export const ViewArtWorkButton = styled.button`
+  width: 100%;
+  height: 50px;
+  background: #ffffff;
+  border: 2px solid #3cbad9;
+  box-sizing: border-box;
+  border-radius: 50px;
+  font-family: 'Work Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  color: #3cbad9;
 `;
