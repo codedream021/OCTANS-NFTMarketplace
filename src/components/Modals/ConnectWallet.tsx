@@ -17,14 +17,12 @@ const ConnectWallet = () => {
         You need to connect your wallet first to sign messages and send
         transaction to Octans network.
       </S.Description>
-      <View marginT={30} column>
-        <Button onClick={connectWallet}>Connect</Button>
-      </View>
-      <View marginT={10} column>
+      <S.ButtonsWrapper>
+      <Button onClick={connectWallet}>Connect</Button>
         <Button onClick={onClose} theme="secondary">
           Cancel
         </Button>
-      </View>
+      </S.ButtonsWrapper>
     </Modal>
   );
 };

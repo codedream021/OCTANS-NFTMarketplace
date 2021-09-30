@@ -13,7 +13,31 @@ export const AuthorName = styled.div`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `;
-
+export const Tags = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+`;
+export const Tag = styled.div`
+  font-size: 18px;
+  font-weight: bold;
+  background: #ffffff;
+  border: 1px solid #f5f5f5;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  color: #1f232b;
+  padding: 10px;
+  margin-left: 10px;
+`;
 export const SocialItem = styled.a`
   width: 80px;
   height: 80px;
@@ -32,14 +56,16 @@ export const SocialItem = styled.a`
 `;
 
 export const Container = styled.div`
-  max-width: 900px;
-  margin: 0 auto;
+  margin: 100px;
+  @media (max-width: 768px) {
+    margin: 50px;
+  }
 `;
 
 export const Hero = styled.div`
   padding-top: 303px;
   margin-top: -203px;
-  
+
   padding-bottom: 143px;
   img {
     border-radius: 20px;
@@ -122,15 +148,17 @@ export const BidBtns = styled.div`
 `;
 
 export const SectionTitle = styled.div`
-  font-size: 33px;
+  font-family: Work Sans;
+  font-style: normal;
   font-weight: bold;
-  color: #000;
+  font-size: 24px;
+  line-height: 24px;
+  color: #1f232b;
   @media (max-width: 768px) {
-    font-size: 24px;
+    font-size: 18px;
   }
-  padding-bottom: 30px;
-  border-bottom: 1px solid #e4e8ed;
-  margin-bottom: 30px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 `;
 
 export const DescriptionText = styled.div`
@@ -148,9 +176,12 @@ export const DescriptionText = styled.div`
 `;
 
 export const Edition = styled.div`
-  font-size: 66px;
-  font-weight: bold;
-  color: #000;
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 48px;
+  color: #1f232b;
 `;
 
 export const CertItem = styled.a`
@@ -169,6 +200,16 @@ export const CertItem = styled.a`
   img {
     margin-right: 30px;
   }
+  div {
+    flex: 1;
+
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: #1f232b;
+  }
 `;
 
 export const HistoryItem = styled.div`
@@ -179,48 +220,66 @@ export const HistoryItem = styled.div`
   box-sizing: border-box;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
   border-radius: 20px;
-  padding: 20px 30px;
+  padding: 10px 15px;
   margin-bottom: 10px;
+  & > img {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
 `;
 export const HistoryPlaced = styled.div`
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 15px;
-  color: #17161a80;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  color: #1f232b;
   span {
-    color: #7549d4;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    color: #656772;
   }
   @media (max-width: 768px) {
-    font-size: 18px;
+    font-size: 14px;
   }
 `;
 export const HistoryDate = styled.div`
-  font-size: 24px;
-  font-weight: 500;
-  color: #17161a80;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  color: #656772;
+  margin-top: 10px;
   @media (max-width: 768px) {
-    font-size: 18px;
+    font-size: 14px;
   }
   opacity: 0.5;
 `;
 export const HistoryVid = styled.div`
-  font-size: 33px;
-  font-weight: bold;
-  color: #000;
-  @media (max-width: 768px) {
-    font-size: 24px;
-  }
-  margin-bottom: 9px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 20px;
   text-align: right;
-`;
-export const HistoryUsd = styled.div`
-  font-size: 24px;
-  opacity: 0.5;
-  color: #17161a80;
+  color: #1f232b;
   @media (max-width: 768px) {
     font-size: 18px;
   }
-  text-align: right;
+  margin-bottom: 9px;
+`;
+export const HistoryUsd = styled.div`
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 16px;
+text-align: right;
+color: #656772;
+opacity: 0.5;
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 export const Video = styled.div`
   border-radius: 20px;
@@ -349,4 +408,50 @@ export const OwnerName = styled.div`
   font-weight: 700;
   margin-left: 20px;
   font-size: 24px;
+`;
+export const CreatorWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  & > img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+`;
+export const CreatorName = styled.div`
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 40px;
+  color: #1f232b;
+`;
+export const CreatorUsername = styled.div`
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+  background: linear-gradient(89.92deg, #3cbad9 0.06%, #6ce2ff 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 10px;
+  margin-bottom: 10px;
+`;
+
+export const Flex = styled.div`
+  display: flex;
+  align-items: center;
+  // justify-content: space-between;
+  width: 70%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
+
+export const ExploreIcon = styled.img`
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  margin-left: 10px;
 `;

@@ -6,6 +6,7 @@ import { GlobalStyles } from 'globalStyles';
 import Footer from 'components/Footer';
 import routes from './routes';
 import VideoDetailsPage from 'components/VideoDetailsPage';
+import NewVideoDetailsPage from 'components/NewVideoDetailsPage';
 import ScrollToTop from 'components/ScrollToTop';
 import { ToastContainer } from 'react-toastify';
 import { QueryClient, QueryClientProvider } from 'react-query';
@@ -60,7 +61,8 @@ function App() {
             <Route path={routes.home} element={<Home />} />
             <Route path="/drops" element={<Home />} />
             <Route path={routes.videos} element={<VideoArtsPage />} />
-            <Route path={routes.video} element={<VideoDetailsPage />} />
+            {/* <Route path={routes.video} element={<VideoDetailsPage />} /> */}
+            <Route path={routes.video} element={<NewVideoDetailsPage />} />
             <Route path={routes.creators} element={<CreatorsPage />} />
             <Route path={routes.creator} element={<NewCreatorPage />} />
             <Route path={routes.upload} element={<UploadPage />} />

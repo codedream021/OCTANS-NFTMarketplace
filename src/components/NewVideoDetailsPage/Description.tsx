@@ -8,7 +8,9 @@ const Description = (props: any) => {
       <S.SectionTitle>Description</S.SectionTitle>
       <S.DescriptionText>
         <p>
-          {text}
+        Possession of this PORTAL entitles you to membership in the TBOA club (theblocksofart.com)
+
+10000x10000
         </p>
       </S.DescriptionText>
     </div>

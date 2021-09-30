@@ -6,6 +6,8 @@ import { createGlobalStyle } from 'styled-components';
 import 'react-toastify/dist/ReactToastify.css';
 
 export const GlobalStyles = createGlobalStyle`
+
+
   * {
     box-sizing: border-box;
     margin: 0;
@@ -50,7 +52,6 @@ export const GlobalStyles = createGlobalStyle`
   html {
     cursor: default;
     -webkit-focus-ring-color: rgba(255, 255, 255, 0);
-    font-family: 'IBM Plex Mono', monospace;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -161,7 +162,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
     min-height: 100vh;
     color: #fff;
-    font-family: 'Roboto', monospace, system-ui, sans-serif;
+    font-family: 'Work Sans', sans-serif;
     font-feature-settings: 'kern', 'liga', 'calt';
   }
   button {

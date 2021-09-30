@@ -32,9 +32,9 @@ export default makeStyles((theme) => ({
   appBar: {
     maxHeight: '88px',
     left: '0.65px',
+    border: "1px solid #F5F5F5 !important",
     top: '0px',
     display: 'flex',
-    border: '1px solid #FCFCFC',
     borderRadius: '3px',
     padding: '0.625rem 0',
     color: '#555',
