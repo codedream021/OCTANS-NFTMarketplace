@@ -25,6 +25,9 @@ import { RootStore, StoreContext } from 'store';
 import Modals from 'components/Modals';
 import ProfilePage from 'components/ProfilePage';
 import EditProfilePage from 'components/EditProfilePage';
+import About from 'components/About';
+import Features from 'components/Features';
+import Feature from 'components/Feature';
 const queryClient = new QueryClient();
 
 const currentConnector = connectorsByName[connectorName];
@@ -59,7 +62,9 @@ function App() {
           />
           <Routes>
             <Route path={routes.home} element={<Home />} />
-            <Route path="/drops" element={<Home />} />
+            <Route path={routes.about} element={<About />} />
+            <Route path={routes.features} element={<Features />} />
+            <Route path={routes.feature} element={<Feature />} />
             <Route path={routes.videos} element={<VideoArtsPage />} />
             {/* <Route path={routes.video} element={<VideoDetailsPage />} /> */}
             <Route path={routes.video} element={<NewVideoDetailsPage />} />
