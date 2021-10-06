@@ -77,7 +77,7 @@ const ProfileBlock = () => {
     } as any);
     setOpenSea(openSeaPort);
    },
-   [library.provider,setOpenSea],
+   [library?.provider,setOpenSea],
  )
   const auth = useCallback(
     async () => {
