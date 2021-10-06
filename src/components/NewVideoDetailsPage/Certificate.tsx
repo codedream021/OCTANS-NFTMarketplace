@@ -31,7 +31,7 @@ const CertItem = ({
     >
       <img width={32} height={32} src={icon} alt={name} />
       <div>{name}</div>
-      <img src="/images/explore.svg" width={32} height={32} />
+      <img src="/images/explore.svg" width={32} height={32} alt="explore" />
     </S.CertItem>
   );
 };

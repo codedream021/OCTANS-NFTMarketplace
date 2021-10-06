@@ -1,6 +1,6 @@
 import { makeAutoObservable } from 'mobx';
 import { BigNumberish } from '@ethersproject/bignumber';
-import authApi from 'api/auth';
+// import authApi from 'api/auth';
 import { OpenSeaPort } from 'opensea-js';
 
 declare global {

@@ -14,9 +14,10 @@ const menu: Link[] = [
     name: 'Explore',
   },
   {
-    path: '/blog',
-    name: 'Blog',
+    path: '/features',
+    name: 'Features',
   },
+
   {
     path: '/about',
     name: 'About',

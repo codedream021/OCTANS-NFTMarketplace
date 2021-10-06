@@ -1,6 +1,5 @@
 import React from 'react';
 import { Head } from './styles';
-import { Grid } from '@material-ui/core';
 import * as S from './styles';
 import FeatureCard from './FeatureCard';
 const featuresData = [

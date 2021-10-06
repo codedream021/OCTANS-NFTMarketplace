@@ -3,7 +3,6 @@ import * as S from './styles';
 import View from 'components/UI/View';
 import Avatar from 'components/Avatar';
 import BidCountdown from 'components/BidCountdown';
-import Button from 'components/UI/Button';
 import { Asset } from 'types/asset';
 import { Link } from 'react-router-dom';
 import { useStore } from 'store';

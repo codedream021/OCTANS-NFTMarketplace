@@ -3,7 +3,6 @@ import { map } from 'lodash/fp';
 import * as S from './styles';
 import Avatar from '../Avatar';
 import View from '../UI/View';
-import OctansLogoSale from 'components/OctansLogoSale';
 
 interface HistoryItemProps {
   id: number;

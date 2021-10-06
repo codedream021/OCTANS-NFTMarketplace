@@ -44,7 +44,8 @@ export const NavBar = styled.div`
     }
     &.active {
       background-color: #3dbbd8;
-      color: #1f232b;
+      color: #fff;
+      padding: 15px;
       border-radius: 12px;
     }
   }

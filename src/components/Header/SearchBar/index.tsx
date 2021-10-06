@@ -7,9 +7,11 @@ import Spinner from 'components/UI/Spinner';
 const SearchBar = ({
   onSearch,
   isFetching,
+  query
 }: {
   onSearch: (q: string) => void;
   isFetching: boolean;
+  query?: string;
 }) => {
   const [q, setQ] = useState('');
   const [focused, setFocused] = useToggle(false);

@@ -8,26 +8,31 @@ type Props = {
   mobileOpen?: any;
   handleDrawerToggle?: () => void;
 };
-interface Link {
+interface LinkProp {
   path: string;
   name: string;
 }
-const menu: Link[] = [
+const menu: LinkProp[] = [
   {
     path: '/',
     name: 'Home',
   },
   {
-    path: '/videos',
-    name: 'Browse',
+    path: '/explore',
+    name: 'Explore',
   },
   {
-    path: '/collections',
-    name: 'Collections',
+    path: '/features',
+    name: 'Features',
+  },
+
+  {
+    path: '/about',
+    name: 'About',
   },
   {
-    path: '/creators',
-    name: 'Creators',
+    path: '/blog',
+    name: 'Blog',
   },
 ];
 

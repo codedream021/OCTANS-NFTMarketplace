@@ -68,8 +68,20 @@ const ProfileBlock = () => {
     getEthBalance();
   }, [account, chainId, getEthBalance, getTokenBalance, library, token]);
 
-  const auth = async () => {
-    if (!account) return;
+ const updateOpenSea = useCallback(
+   () => {
+    const token = localStorage.getItem('token') || '';
+    const openSeaPort = new OpenSeaPort(library.provider, {
+      networkName: Network.Custom,
+      authToken: token,
+    } as any);
+    setOpenSea(openSeaPort);
+   },
+   [library.provider,setOpenSea],
+ )
+  const auth = useCallback(
+    async () => {
+      if (!account) return;
     const authToken = localStorage.getItem('token');
     const storedAccount = localStorage.getItem('account');
     if (authToken && storedAccount === account) {
@@ -93,16 +105,10 @@ const ProfileBlock = () => {
     setTokenHeader(token);
     updateOpenSea();
     refetch();
-  };
+    },
+    [account, library, refetch, updateOpenSea],
+  )
 
-  const updateOpenSea = () => {
-    const token = localStorage.getItem('token') || '';
-    const openSeaPort = new OpenSeaPort(library.provider, {
-      networkName: Network.Custom,
-      authToken: token,
-    } as any);
-    setOpenSea(openSeaPort);
-  };
 
   useEffect(() => {
     if (!account || !library || !chainId) return;
@@ -111,7 +117,7 @@ const ProfileBlock = () => {
     setToken(vid);
     setAccount(account);
     auth();
-  }, [account, chainId, library, setAccount, setToken]);
+  }, [account, chainId, library, setAccount, setToken,auth]);
   useEffect(() => {
     getBalance();
   }, [getBalance]);

@@ -67,7 +67,7 @@ img {
 }
 ${({ isCreatorPage }) => (isCreatorPage ? CreatorPage : isNormalPage)};
 @media (max-width: 768px) {
-  ${({ size }) => (size=="sm" ? sizes.sm : sizes.xl)};
+  ${({ size }) => (size==="sm" ? sizes.sm : sizes.xl)};
 }
 
 `;

@@ -1,4 +1,4 @@
-import React, { SyntheticEvent, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import View from 'components/UI/View';
 import Avatar from 'components/Avatar';
@@ -34,9 +34,9 @@ const ProfilePage = () => {
   const { profileImgUrl, address, user } = data;
   const shortAddress = cutString(address, 6, 5);
   const { name, username } = user;
-  const handleSwitchTab = (e: SyntheticEvent<HTMLButtonElement>) => {
-    setTab(+(e.currentTarget.dataset.tab as any));
-  };
+  // const handleSwitchTab = (e: SyntheticEvent<HTMLButtonElement>) => {
+  //   setTab(+(e.currentTarget.dataset.tab as any));
+  // };
   return (
     <div>
       <S.Header>

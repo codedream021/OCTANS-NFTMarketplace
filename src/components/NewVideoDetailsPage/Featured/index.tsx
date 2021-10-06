@@ -1,11 +1,7 @@
 import React from 'react';
 import * as S from './styles';
-import View from 'components/UI/View';
-import Avatar from 'components/Avatar';
 import BidCountdown from 'components/BidCountdown';
-import Button from 'components/UI/Button';
 import { Asset } from 'types/asset';
-import { Link } from 'react-router-dom';
 import { useStore } from 'store';
 import { useWeb3React } from '@web3-react/core';
 import { Grid } from '@material-ui/core';
@@ -15,8 +11,8 @@ const FeaturedVideo = ({ asset }: { asset: Asset }) => {
   const { account } = useWeb3React();
   const { openModal } = useStore('modalsStore');
   if (!asset) return null;
-  const { id, name, owner } = asset;
-  const { profileImgUrl, user, address } = owner;
+  const { name, owner } = asset;
+  const { profileImgUrl, user } = owner;
   const handlePlaceBid = () => {
     if (!account) {
       openModal('connectWallet');
@@ -31,7 +27,7 @@ const FeaturedVideo = ({ asset }: { asset: Asset }) => {
         <S.Video>
           <img src={nft} alt="NFT" />
           <S.Author>
-            <img src={profileImgUrl} />
+            <img src={profileImgUrl} alt="NFT" />
             <div>@{user?.username || ''}</div>
           </S.Author>
         </S.Video>

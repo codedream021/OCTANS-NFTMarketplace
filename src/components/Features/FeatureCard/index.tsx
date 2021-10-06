@@ -1,6 +1,7 @@
 import { Grid } from '@material-ui/core';
 import Separator from 'components/UI/Separator';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import * as S from './styles';
 
 function FeatureCard({
@@ -32,7 +33,9 @@ function FeatureCard({
           <S.Date>
             <h3>{date.substr(0,2)}</h3> <span>{date.substr(2,4)}</span>
           </S.Date>
+          <Link to="/feature/1">
           <S.Title>{title}</S.Title>
+          </Link>
           <S.Creator>
             <h3>Creator</h3>
             <p>{creator}</p>

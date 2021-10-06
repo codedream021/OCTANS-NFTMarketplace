@@ -1,58 +1,38 @@
-import { Grid } from '@material-ui/core';
-import Separator from 'components/UI/Separator';
 import React from 'react';
 import * as S from './styles';
 
-function FeatureCard({
-  revert,
-  title,
-  description,
-  date,
-  creator,
-}: {
-  revert?: boolean;
-  title: string;
-  description: string;
-  date: string;
-  creator: string;
-
-}) {
+const FeatureCard = () => {
   return (
-    <Grid container>
-      {!revert ? (
-        <Grid item xs={12} md={8}>
-          <S.Video>
-            <img src="/images/features.png" alt="NFT" />
-          </S.Video>
-        </Grid>
-      ) : null}
-
-      <Grid item xs={12} md={4}>
-        <S.Content>
-          <S.Date>
-            <h3>{date.substr(0,2)}</h3> <span>{date.substr(2,4)}</span>
-          </S.Date>
-          <S.Title>{title}</S.Title>
-          <S.Creator>
-            <h3>Creator</h3>
-            <p>{creator}</p>
-          </S.Creator>
-          <Separator width="100" />
-          <S.Description>
-            <h3>Feature Artists</h3>
-            {description}
-          </S.Description>
-        </S.Content>
-      </Grid>
-      {revert ? (
-        <Grid item xs={12} md={8}>
-          <S.Video>
-            <img src="/images/features.png" alt="NFT" />
-          </S.Video>
-        </Grid>
-      ) : null}
-    </Grid>
+    <S.Card isProfileCard={true}>
+      <S.Thumb>
+        <S.Poster src={'/images/feature.png'} alt={'feature'} />
+      </S.Thumb>
+      <div>
+        <S.Title>{'Inside Worlds - No.1'}</S.Title>
+        <S.ListPrice>
+          - List price
+          </S.ListPrice>
+        <S.AuctionCardStatus>
+          <S.CardFooterContainer>
+            <div>
+              <S.BidLabel>Artist</S.BidLabel>
+              <S.BidValue>
+                <img src={'/images/feature_owner.png'} alt={'owner'} />
+                <span>Awaiting</span>
+              </S.BidValue>
+            </div>
+            <div>
+              <S.BidLabel>Owner</S.BidLabel>
+              <S.BidValue>
+                <img src={'/images/feature_owner.png'} alt={'owner'} />
+                <span>Awaiting</span>
+              </S.BidValue>
+            </div>
+          </S.CardFooterContainer>
+        </S.AuctionCardStatus>
+      </div>
+    </S.Card>
   );
-}
+};
 
 export default FeatureCard;

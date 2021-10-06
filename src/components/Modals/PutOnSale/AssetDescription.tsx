@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import * as S from 'components/Modals/PutOnSale/styles';
 import View from 'components/UI/View';
 import Avatar from 'components/Avatar';

@@ -2,7 +2,7 @@ import React from 'react';
 import * as S from './styles';
 
 const Description = (props: any) => {
-  const { text } = props;
+  // const { text } = props;
   return (
     <div>
       <S.SectionTitle>Description</S.SectionTitle>

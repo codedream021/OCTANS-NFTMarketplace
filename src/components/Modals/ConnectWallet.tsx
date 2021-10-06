@@ -3,7 +3,6 @@ import Modal from 'components/UI/Modal';
 import * as S from './styles';
 import { useStore } from 'store';
 import Button from 'components/UI/Button';
-import View from 'components/UI/View';
 import useConnectWallet from 'hooks/useConnectWallet';
 
 const ConnectWallet = () => {

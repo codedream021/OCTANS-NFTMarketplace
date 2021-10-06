@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import * as S from './styles';
 import { ReactComponent as VideoIcon } from 'icons/yt.svg';
@@ -14,17 +14,27 @@ const Dropzone = () => {
   const [progress, setProgress] = useState(0);
   const [isUploading, setUploading] = useState(false);
   const [isProcessing, setProcessing] = useState(false);
-  const config = {
-    onUploadProgress: function (progressEvent: ProgressEvent) {
-      const percentCompleted = Math.round(
-        (progressEvent.loaded * 100) / progressEvent.total
-      );
-      setProgress(percentCompleted);
-    },
-  };
 
-  const fetchAsset = async (id: number) => {
-    const res = await assetsApi.fetchAsset(id);
+  const config = useMemo(() => {
+    return {
+      onUploadProgress: function (progressEvent: ProgressEvent) {
+        const percentCompleted = Math.round(
+          (progressEvent.loaded * 100) / progressEvent.total
+        );
+        setProgress(percentCompleted);
+      },
+    }
+  }, []);
+  const poll:any = useCallback(
+    (id: number) => {
+      setTimeout(() => fetchAsset(id), 1000);
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    []
+  )
+  const fetchAsset = useCallback(
+    async (id: number) => {
+      const res = await assetsApi.fetchAsset(id);
     if (res.status === 'PROCESSING') {
       poll(id);
     } else {
@@ -34,11 +44,13 @@ const Dropzone = () => {
       setProcessing(false);
     }
     return res;
-  };
-  const poll = (id: number) => {
-    setTimeout(() => fetchAsset(id), 1000);
-  };
-  const upload = async (file: File) => {
+    },
+    [poll,setAsset],
+  )
+
+
+
+  const upload = useCallback(async (file: File) => {
     setUploading(true);
     const form = new FormData();
     form.append('file', file);
@@ -51,11 +63,12 @@ const Dropzone = () => {
       setUploading(false);
       setProcessing(false);
     }
-  };
+
+  },[config,poll]);
   const onDrop = useCallback((acceptedFiles) => {
     if (!acceptedFiles.length) return;
     upload(acceptedFiles[0]);
-  }, []);
+  }, [upload]);
   const { getRootProps, getInputProps } = useDropzone({ onDrop });
   return (
     <S.Dropzone {...getRootProps()}>

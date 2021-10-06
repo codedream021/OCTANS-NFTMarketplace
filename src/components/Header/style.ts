@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core';
 
-const drawerWidth = 260;
+// const drawerWidth = 260;
 const defaultFont = {
   fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
   fontWeight: 300,

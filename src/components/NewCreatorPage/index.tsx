@@ -1,4 +1,4 @@
-import React, { SyntheticEvent, useState } from 'react';
+import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useCreator } from 'api/creators';
 import Avatar from 'components/Avatar';
@@ -7,7 +7,6 @@ import Container from 'components/UI/Container';
 import * as S from './styles';
 import { ReactComponent as CopyIcon } from 'icons/copy.svg';
 import cutString from 'helpers/cutString';
-import { Tab } from './share';
 import { Grid } from '@material-ui/core';
 import AvatarGroup from '@mui/material/AvatarGroup';
 import { Avatar as Avatarr } from '@mui/material';
@@ -30,15 +29,15 @@ const CreatorPage = () => {
   const { id } = useParams();
   const { data } = useCreator(id);
 
-  const [tab, setTab] = useState(Tab.videoArt);
+  // const [tab, setTab] = useState(Tab.videoArt);
   if (!data) return <Spinner />;
   const { profileImgUrl, address, user } = data;
   const shortAddress = cutString(address, 6, 5);
   const { name, username } = user;
   console.log({ data });
-  const handleSwitchTab = (e: SyntheticEvent<HTMLButtonElement>) => {
-    setTab(+(e.currentTarget.dataset.tab as any));
-  };
+  // const handleSwitchTab = (e: SyntheticEvent<HTMLButtonElement>) => {
+  //   setTab(+(e.currentTarget.dataset.tab as any));
+  // };
   return (
     <S.CreatorPageWrapper>
       <Container>
@@ -119,7 +118,7 @@ const CreatorPage = () => {
               </S.SocialItem>
               <S.SocialUsername>@{username}</S.SocialUsername>
               <S.SocialItem>
-                <img src="/images/check2.svg"  />
+                <img src="/images/check2.svg" alt="check"  />
               </S.SocialItem>
             </S.SocialWrapper>
             <S.SocialWrapper>
@@ -127,14 +126,14 @@ const CreatorPage = () => {
                 <Instagram />
               </S.SocialItem>
               <S.SocialUsername>@{username}</S.SocialUsername>
-              <img src="/images/check2.svg"  />
+              <img src="/images/check2.svg" alt="check"  />
             </S.SocialWrapper>
             <S.SocialWrapper>
               <S.SocialItem>
                 Invited By
               </S.SocialItem>
               <S.SocialUsername>@{username}</S.SocialUsername>
-              <img src="/images/girl.png"  />
+              <img src="/images/girl.png"  alt="check" />
             </S.SocialWrapper>
             <S.Separator />
             <S.Joined>
@@ -154,7 +153,3 @@ const CreatorPage = () => {
 };
 
 export default CreatorPage;
-
-{
-  /* <TabNav tabs={tabs} activeTab={tab} onChange={setTab} /> */
-}
