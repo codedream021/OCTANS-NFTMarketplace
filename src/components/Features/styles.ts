@@ -99,8 +99,13 @@ export const Cards = styled.div`
  
  
   margin:100px;
+  @media (max-width: 768px) {
+    margin: 20px;
+  }
   & > div {
     margin-top: 80px;
+    @media (max-width: 768px) {
+      margin-top: 40px;
   }
 
 `;
@@ -141,5 +146,8 @@ export const LearnMoreContainer = styled.div`
   display: flex;
   max-width: 100%;
   margin-left: 213px;
+  @media (max-width: 768px) {
+    margin-left: 0px;
+  }
   padding: 0 24px;
 `;

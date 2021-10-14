@@ -75,24 +75,20 @@ export const Button = styled.div`
   width: 50%;
   height: 60px;
   margin: auto;
-
   background: #ffffff;
   border: 2px solid #3cbad9;
   box-sizing: border-box;
   border-radius: 50px;
-
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
   line-height: 18px;
-
   text-align: center;
-
   color: #3cbad9;
   margin-bottom: 60px;
-
   @media (max-width: 768px) {
     height: 50px;
+    margin-bottom: 20px;
   }
 `;
 export const Cards = styled.div`
@@ -101,6 +97,8 @@ export const Cards = styled.div`
   margin:100px;
   & > div {
     margin-top: 80px;
+    @media (max-width: 768px) {
+      margin-top: 20px;
   }
 
 `;
@@ -141,5 +139,8 @@ export const LearnMoreContainer = styled.div`
   display: flex;
   max-width: 100%;
   margin-left: 213px;
+  @media (max-width: 768px) {
+    margin-left: 0px;
+  }
   padding: 0 24px;
 `;

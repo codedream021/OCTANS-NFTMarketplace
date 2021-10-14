@@ -21,6 +21,9 @@ export const Head = styled.div`
   align-items: space-between;
   & :last-of-type {
     margin-left: auto;
+    @media (max-width: 768px) {
+      margin-left: 10px;
+    }
     & :first-of-type {
       margin-right: 10px;
       color: #000;
@@ -28,6 +31,9 @@ export const Head = styled.div`
   }
   & :first-of-type {
     margin-right: auto;
+    @media (max-width: 768px) {
+      margin-right: 10px;
+    }
   }
   & > h1 {
     font-family: Inter;
@@ -125,6 +131,9 @@ export const Creators = styled.div`
   border: 1px solid #ededed;
   box-sizing: border-box;
   width: 80%;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
   margin-left: auto;
   & > h2 {
     font-style: normal;
@@ -220,6 +229,11 @@ export const ReadMore = styled.p`
 
 export const Swipeable = styled.div`
   display: flex;
+  @media (max-width: 768px) {
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
   margin-top: 50px;
 `;
 export const Circle = styled.div`

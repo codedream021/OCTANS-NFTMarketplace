@@ -1,5 +1,14 @@
 import styled from 'styled-components';
 
+export const TitleWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  @media (max-width: 768px) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+`;
 
 export const Title = styled.div`
   font-size: 33px;
@@ -69,6 +78,7 @@ export const Creator = styled.div`
   margin-bottom: 60px;
   @media (max-width: 768px) {
     font-size: 14px;
+    margin-bottom: 20px;
   }
 `;
 export const Video = styled.div`
