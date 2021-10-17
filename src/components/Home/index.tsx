@@ -1,9 +1,6 @@
 import React from 'react';
 import LiveAuctions from '../LiveAuctions';
-import Subscribe from './Subscribe';
-import { Head, Title } from './styles';
-import FeaturedVideos from 'components/FeaturedVideos';
-import BecomeCreator from 'components/BecomeCreator';
+import { Head} from './styles';
 import Creators from '../Creators';
 import FeaturedVideo from 'components/FeaturedVideo';
 import { useFeatured } from 'api/spotlight';

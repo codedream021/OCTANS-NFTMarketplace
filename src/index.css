@@ -26,7 +26,7 @@ code {
 
 .crsl--content .swiper-pagination{
   text-align: left;
-  margin-left: 200px;
+  margin-left: 100px;
 
 }
 @media screen and (max-width: 367px) {
@@ -36,11 +36,19 @@ code {
 
   }
 }
+
+
 .swiper-pagination {
   margin-top: 48.57px;
   position: unset !important;
 }
-
+@media screen and (max-width: 768px) {
+  .swiper-pagination {
+    margin-top: 0;
+    margin-left: 100px;
+  }
+}
+  
 .swiper-pagination-bullet {
   padding: 2px;
   background: #E7F0F9 !important;

@@ -143,9 +143,9 @@ const Header: React.FC<Props> = ({
           </Hidden>
         </div>
 
-        <Hidden smDown implementation="css">
+        <Hidden mdDown implementation="css">
           <div className={classes.flex}>
-            <SearchBar onSearch={setQ} isFetching={false} />
+            <SearchBar onSearch={setQ} query={q} isFetching={false} />
             <NavBar />
           </div>
         </Hidden>

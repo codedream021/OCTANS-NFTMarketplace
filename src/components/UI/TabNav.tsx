@@ -1,7 +1,6 @@
 import React, { SyntheticEvent, useCallback } from 'react';
 import { map } from 'lodash/fp';
 import styled from 'styled-components';
-import View from './View';
 
 interface Tab<T> {
   id: T;
@@ -37,11 +36,15 @@ const TabNavButton = styled.button<{ active: boolean }>`
 `;
 
 const TabNav = <T extends number>({ tabs, onChange, activeTab }: Props<T>) => {
-  const handleChange = (e: SyntheticEvent<HTMLButtonElement>) => {
-    const { tab } = e.currentTarget.dataset;
+
+  const handleChange = useCallback(
+    (e: SyntheticEvent<HTMLButtonElement>) => {
+      const { tab } = e.currentTarget.dataset;
     if (!tab) return;
     onChange(+tab as T);
-  };
+    },
+    [onChange],
+  )
   const renderButton = useCallback(
     ({ name, id }: Tab<T>) => {
       return (
@@ -55,7 +58,7 @@ const TabNav = <T extends number>({ tabs, onChange, activeTab }: Props<T>) => {
         </TabNavButton>
       );
     },
-    [activeTab]
+    [activeTab,handleChange]
   );
 
   return <div>{map(renderButton, tabs)}</div>;

@@ -32,7 +32,7 @@ const EditProfilePage = () => {
     if (isFetchedAfterMount) {
       reset(defaultValues);
     }
-  }, [isFetchedAfterMount]);
+  }, [isFetchedAfterMount,defaultValues,reset]);
 
   const onSubmit = async (values: any) => {
     try {

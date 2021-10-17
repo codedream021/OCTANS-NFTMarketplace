@@ -5,12 +5,13 @@ import Header from './components/Header/Header';
 import { GlobalStyles } from 'globalStyles';
 import Footer from 'components/Footer';
 import routes from './routes';
-import VideoDetailsPage from 'components/VideoDetailsPage';
+// import VideoDetailsPage from 'components/VideoDetailsPage';
+import NewVideoDetailsPage from 'components/NewVideoDetailsPage';
 import ScrollToTop from 'components/ScrollToTop';
 import { ToastContainer } from 'react-toastify';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import CreatorsPage from 'components/CreatorsPage';
-import CreatorPage from 'components/CreatorPage';
+// import CreatorPage from 'components/CreatorPage';
 import NewCreatorPage from 'components/NewCreatorPage';
 import VideoArtsPage from 'components/VideoArtsPage';
 import { useWeb3React } from '@web3-react/core';
@@ -24,6 +25,9 @@ import { RootStore, StoreContext } from 'store';
 import Modals from 'components/Modals';
 import ProfilePage from 'components/ProfilePage';
 import EditProfilePage from 'components/EditProfilePage';
+import About from 'components/About';
+import Features from 'components/Features';
+import Feature from 'components/Feature';
 const queryClient = new QueryClient();
 
 const currentConnector = connectorsByName[connectorName];
@@ -58,9 +62,12 @@ function App() {
           />
           <Routes>
             <Route path={routes.home} element={<Home />} />
-            <Route path="/drops" element={<Home />} />
+            <Route path={routes.about} element={<About />} />
+            <Route path={routes.features} element={<Features />} />
+            <Route path={routes.feature} element={<Feature />} />
             <Route path={routes.videos} element={<VideoArtsPage />} />
-            <Route path={routes.video} element={<VideoDetailsPage />} />
+            {/* <Route path={routes.video} element={<VideoDetailsPage />} /> */}
+            <Route path={routes.video} element={<NewVideoDetailsPage />} />
             <Route path={routes.creators} element={<CreatorsPage />} />
             <Route path={routes.creator} element={<NewCreatorPage />} />
             <Route path={routes.upload} element={<UploadPage />} />

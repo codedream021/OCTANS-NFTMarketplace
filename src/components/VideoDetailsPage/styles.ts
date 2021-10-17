@@ -3,7 +3,15 @@ import styled from 'styled-components';
 export const AuthorName = styled.div`
   font-size: 24px;
   font-weight: bold;
-  color: #fff;
+  background: linear-gradient(
+    270deg,
+    #7549d4 0%,
+    #e2486a 35.94%,
+    #ed6858 69.79%,
+    #f09051 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;
 
 export const SocialItem = styled.a`
@@ -40,7 +48,7 @@ export const Hero = styled.div`
 
 export const Title = styled.div`
   font-size: 66px;
-  color: #fff;
+  color: #000;
   @media (max-width: 768px) {
     font-size: 38px;
   }
@@ -65,6 +73,7 @@ export const BidLabel = styled.div`
 
 export const BidInfo = styled.div`
   display: flex;
+  color: #8f9bb3;
   justify-content: center;
   & > div {
     flex: 1;
@@ -115,7 +124,7 @@ export const BidBtns = styled.div`
 export const SectionTitle = styled.div`
   font-size: 33px;
   font-weight: bold;
-  color: #fff;
+  color: #000;
   @media (max-width: 768px) {
     font-size: 24px;
   }
@@ -130,7 +139,7 @@ export const DescriptionText = styled.div`
   @media (max-width: 768px) {
     font-size: 18px;
   }
-  color: #fff;
+  color: #17161a80;
   p {
     &:not(:last-child) {
       margin-bottom: 20px;
@@ -141,6 +150,7 @@ export const DescriptionText = styled.div`
 export const Edition = styled.div`
   font-size: 66px;
   font-weight: bold;
+  color: #000;
 `;
 
 export const CertItem = styled.a`
@@ -154,6 +164,7 @@ export const CertItem = styled.a`
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 10px;
+  color: #17161a80;
   cursor: pointer;
   img {
     margin-right: 30px;
@@ -175,6 +186,7 @@ export const HistoryPlaced = styled.div`
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 15px;
+  color: #17161a80;
   span {
     color: #7549d4;
   }
@@ -185,6 +197,7 @@ export const HistoryPlaced = styled.div`
 export const HistoryDate = styled.div`
   font-size: 24px;
   font-weight: 500;
+  color: #17161a80;
   @media (max-width: 768px) {
     font-size: 18px;
   }
@@ -193,6 +206,7 @@ export const HistoryDate = styled.div`
 export const HistoryVid = styled.div`
   font-size: 33px;
   font-weight: bold;
+  color: #000;
   @media (max-width: 768px) {
     font-size: 24px;
   }
@@ -202,6 +216,7 @@ export const HistoryVid = styled.div`
 export const HistoryUsd = styled.div`
   font-size: 24px;
   opacity: 0.5;
+  color: #17161a80;
   @media (max-width: 768px) {
     font-size: 18px;
   }
@@ -239,11 +254,13 @@ export const FileCoinPopup = styled.div`
   background: #fff;
   border-radius: 30px;
   padding: 30px;
+  color: #17161a80;
   position: relative;
 `;
 
 export const EncryptionPopup = styled.div`
   width: 540px;
+  color: #17161a80;
   background: #fff;
   border-radius: 30px;
   padding: 30px;

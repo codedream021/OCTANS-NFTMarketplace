@@ -7,7 +7,6 @@ import logoWhite from '../Header/assets/w_logo.png';
 import logo2xWhite from '../Header/assets/w_logo@2x.png';
 import View from '../UI/View';
 import styled from 'styled-components';
-import Social from 'components/VideoDetailsPage/Social';
 import { ReactComponent as Facebook } from '../Header/assets/facebook.svg';
 import { ReactComponent as Twitter } from '../Header/assets/twitter.svg';
 import { ReactComponent as Linkedin } from '../Header/assets/linkedin.svg';
@@ -16,6 +15,10 @@ const menu = [
   {
     path: '/explore',
     name: 'Explore',
+  },
+  {
+    path: '/features',
+    name: 'Features',
   },
   {
     path: '/blog',

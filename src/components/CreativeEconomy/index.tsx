@@ -1,10 +1,8 @@
 import Button from 'components/UI/Button';
-import Container, { Tilt } from 'components/UI/Container';
+import Container from 'components/UI/Container';
 import View from 'components/UI/View';
 import React from 'react';
 import * as S from './styles';
-import bg from './bg.jpg';
-import bg2x from './bg@2x.jpg';
 
 const CreativeEconomy = () => {
   return (
